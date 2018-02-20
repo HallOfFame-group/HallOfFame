@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Spine.Unity;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
