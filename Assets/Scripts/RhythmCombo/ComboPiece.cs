@@ -13,7 +13,7 @@ public struct TimedNode
 public class ComboPiece : MonoBehaviour
 {
     #region Public Editable Members
-    public AudioClip audio;
+    public string musicPathReference;
     public string musicName;
     public string artistName;
     public Image icon;
@@ -22,9 +22,22 @@ public class ComboPiece : MonoBehaviour
 
     #region Private Members
 
+    [FMODUnity.EventRef]
+    string musicPath;
+
+    FMOD.Studio.EventInstance musicEvent;
+
     #endregion
 
     #region Internal Methods
+
+    private void Start()
+    {
+        musicPath = musicPathReference;
+        musicEvent = FMODUnity.RuntimeManager.CreateInstance(musicPath);
+
+        musicEvent.start();
+    }
 
     #endregion
 }
