@@ -71,6 +71,7 @@ public class BeatLine : MonoBehaviour
         // Right now just using space bar for detection
         bool key1 = Input.GetAxis("RhythmKey1") != 0.0f;
         bool key2 = Input.GetAxis("RhythmKey2") != 0.0f;
+        bool key3 = Input.GetAxis("RhythmKey3") != 0.0f;
 
         if ((key1 || key2) && nodeList.Count > 0)
         {
@@ -79,8 +80,9 @@ public class BeatLine : MonoBehaviour
             // Check if the key pressed equals the first node in list
             // Using debounce to prevent player smashing all keys
             BeatNode beatNode = nodeList[0].GetComponent<BeatNode>();
-            if ((beatNode.keyCode == NodeButton.Key1 && key1 && !key2) ||
-                (beatNode.keyCode == NodeButton.Key2 && !key1 && key2))
+            if ((beatNode.keyCode == NodeButton.A && key1 && !key2 && !key3) ||
+                (beatNode.keyCode == NodeButton.B && !key1 && key2 && !key3) ||
+                (beatNode.keyCode == NodeButton.Y && !key1 && !key2 && key3))
             {
                 // Using the distance from the center to determine the score
                 if (Mathf.Abs(nodeList[0].transform.position.x - this.transform.position.x) < perfectAllowanceRange)
