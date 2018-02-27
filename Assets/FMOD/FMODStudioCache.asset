@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114606465543084434}
+  - {fileID: 114580682187108354}
+  - {fileID: 114812566911407950}
+  - {fileID: 114842594295677906}
+  EditorEvents:
+  - {fileID: 114134647055138114}
+  MasterBankRef: {fileID: 114812566911407950}
+  StringsBankRef: {fileID: 114606465543084434}
+  stringsBankWriteTime: 636528653166223441
+  cacheVersion: 2
+--- !u!114 &114134647055138114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Mozart Requiem
+  guid: 79ac10d55fbca04288b05fb56614ea20
+  Banks:
+  - {fileID: 114580682187108354}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114757556188101490}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 14500
+--- !u!114 &114580682187108354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\patri\Documents\GitHub\Hall-of-Fame\Hall of Fame\HallOfFame\Build\Desktop\Music.bank
+  lastModified: 636528653166702977
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 173888
+  Exists: 1
+--- !u!114 &114606465543084434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\patri\Documents\GitHub\Hall-of-Fame\Hall of Fame\HallOfFame\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 636528653166223441
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 824
+  Exists: 1
+--- !u!114 &114757556188101490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Badness
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114812566911407950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\patri\Documents\GitHub\Hall-of-Fame\Hall of Fame\HallOfFame\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636528653166143227
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
+--- !u!114 &114842594295677906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\patri\Documents\GitHub\Hall-of-Fame\Hall of Fame\HallOfFame\Build\Desktop\Test
+    Bank.bank
+  lastModified: 636528653166284005
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
