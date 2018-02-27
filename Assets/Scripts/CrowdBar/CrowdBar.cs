@@ -79,6 +79,7 @@ public class CrowdBar : MonoBehaviour
 
     private void Update()
     {
+        UpdateTargetLocation();
         crowdImg.GetComponent<RectTransform>().localPosition = Vector3.Lerp(crowdImg.GetComponent<RectTransform>().localPosition, targetLocation, 0.1f);
     }
 }
