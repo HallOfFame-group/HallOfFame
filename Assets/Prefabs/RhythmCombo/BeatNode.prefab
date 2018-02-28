@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyCode: 0
-  key1: {fileID: 21300000, guid: 55ae62279eeef0f4fa53977b986d8527, type: 3}
-  key2: {fileID: 21300000, guid: 778de3ceb094d7c408eda22d2b688ab0, type: 3}
+  btnA: {fileID: 21300000, guid: 55ae62279eeef0f4fa53977b986d8527, type: 3}
+  btnB: {fileID: 21300000, guid: 778de3ceb094d7c408eda22d2b688ab0, type: 3}
 --- !u!212 &212548164012313400
 SpriteRenderer:
   m_ObjectHideFlags: 1

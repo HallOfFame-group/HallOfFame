@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum NodeButton
 {
-    Key1,
-    Key2
+    A,
+    B,
+    Y
 }
 
 public class BeatNode : MonoBehaviour
@@ -21,8 +22,8 @@ public class BeatNode : MonoBehaviour
     // Flag controlling lerping motion state
     private bool start = false;
 
-    [SerializeField] private Sprite key1;
-    [SerializeField] private Sprite key2;
+    [SerializeField] private Sprite btnA;
+    [SerializeField] private Sprite btnB;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -34,13 +35,17 @@ public class BeatNode : MonoBehaviour
     {
         destination = this.transform.position + Vector3.right * distance;
         timeInterval = distance / travelSpeed * Time.fixedDeltaTime;
-        if (keyCode == NodeButton.Key1)
+        if (keyCode == NodeButton.A)
         {
-            spriteRenderer.sprite = key1;
+            spriteRenderer.sprite = btnA;
+        }
+        else if (keyCode == NodeButton.B)
+        {
+            spriteRenderer.sprite = btnB;
         }
         else
         {
-            spriteRenderer.sprite = key2;
+            spriteRenderer.sprite = btnB;
         }
         start = true;
     }

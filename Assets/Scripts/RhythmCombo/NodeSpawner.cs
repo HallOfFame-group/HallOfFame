@@ -67,10 +67,8 @@ public class NodeSpawner : MonoBehaviour
 
             if (timeNodes[spawnCount].timeStamp - travelSpeed <= elapsedTime)
             {
-                int spawnIndex = Random.Range(0, 3);
-
                 // Instantiate beat node
-                BeatNode node = Instantiate(beatNode, spawnLine[spawnIndex].transform).GetComponent<BeatNode>();
+                BeatNode node = Instantiate(beatNode, spawnLine[(int)timeNodes[spawnCount].nodeButton].transform).GetComponent<BeatNode>();
                 node.keyCode = timeNodes[spawnCount].nodeButton;
                 node.StartNode(endlineDistance, travelSpeed);
 
