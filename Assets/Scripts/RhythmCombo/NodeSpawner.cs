@@ -88,6 +88,11 @@ public class NodeSpawner : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator DelayAudioSource()
+    {
+        yield return new WaitForSeconds(travelSpeed);
+    }
     #endregion
 
     #region Public Methods
@@ -102,6 +107,7 @@ public class NodeSpawner : MonoBehaviour
     {
         spawning = true;
         spawnCount = 0;
+        StartCoroutine(DelayAudioSource());
     }
 
     public void EndlinePosition(Vector3 endline)
