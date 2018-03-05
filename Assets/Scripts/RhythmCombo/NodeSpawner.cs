@@ -37,6 +37,8 @@ public class NodeSpawner : MonoBehaviour
     [SerializeField] private float travelSpeed = 1.5f;
 
     private GameObject[] spawnLine;
+
+    AudioSource audioSource;
     #endregion
 
     #region Private Methods
@@ -55,6 +57,8 @@ public class NodeSpawner : MonoBehaviour
         spawnLine[0] = transform.Find("TopLine").gameObject;
         spawnLine[1] = transform.Find("MidLine").gameObject;
         spawnLine[2] = transform.Find("BotLine").gameObject;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
