@@ -22,22 +22,8 @@ public class ComboPiece : MonoBehaviour
 
     #region Private Members
 
-    [FMODUnity.EventRef]
-    string musicPath;
-
-    FMOD.Studio.EventInstance musicEvent;
-
     #endregion
 
     #region Internal Methods
-
-    private void Start()
-    {
-        musicPath = musicPathReference;
-        musicEvent = FMODUnity.RuntimeManager.CreateInstance(musicPath);
-
-        musicEvent.start();
-    }
-
     #endregion
 }

@@ -186,7 +186,7 @@ public class RhythmCombo : MonoBehaviour
     public void Display()
     {
         Activate(true);
-        nodeSpawner.StartSpawning();
+        nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
 
     /// <summary>
