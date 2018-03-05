@@ -43,6 +43,8 @@ public class RhythmCombo : MonoBehaviour
     public RhythmResult comboResult;
 
     private bool spawnFinishedFlag = false;
+
+    private ComboPiece currentPlayingPiece;
     #endregion
 
     #region Public Members
@@ -171,6 +173,7 @@ public class RhythmCombo : MonoBehaviour
     /// <param name="combo"></param>
     public void Register(ComboPiece combo)
     {
+        currentPlayingPiece = combo;
         title.text = combo.musicName + " - " + combo.artistName;
         // icon = combo.icon
         nodeSpawner.PrepareNodes(combo.timeNodeArray);

@@ -37,6 +37,8 @@ public class NodeSpawner : MonoBehaviour
     [SerializeField] private float travelSpeed = 1.5f;
 
     private GameObject[] spawnLine;
+
+    AudioSource audioSource;
     #endregion
 
     #region Private Methods
@@ -55,6 +57,8 @@ public class NodeSpawner : MonoBehaviour
         spawnLine[0] = transform.Find("TopLine").gameObject;
         spawnLine[1] = transform.Find("MidLine").gameObject;
         spawnLine[2] = transform.Find("BotLine").gameObject;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -84,6 +88,11 @@ public class NodeSpawner : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator DelayAudioSource()
+    {
+        yield return new WaitForSeconds(travelSpeed);
+    }
     #endregion
 
     #region Public Methods
@@ -98,6 +107,7 @@ public class NodeSpawner : MonoBehaviour
     {
         spawning = true;
         spawnCount = 0;
+        StartCoroutine(DelayAudioSource());
     }
 
     public void EndlinePosition(Vector3 endline)
