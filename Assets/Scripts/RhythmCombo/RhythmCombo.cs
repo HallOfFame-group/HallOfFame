@@ -43,6 +43,8 @@ public class RhythmCombo : MonoBehaviour
     public RhythmResult comboResult;
 
     private bool spawnFinishedFlag = false;
+
+    private ComboPiece currentPlayingPiece;
     #endregion
 
     #region Public Members
@@ -73,7 +75,9 @@ public class RhythmCombo : MonoBehaviour
     // Using delegate as function callback method
     // This will be called when rhythm combo has finished, and returns the result to caller
     public delegate void RhythmComboCallback();
-    public RhythmComboCallback callbackFunc;
+    public delegate void RHythmComboOnNodeHit(NodePressResult result);
+    public RhythmComboCallback finishedEventCallback;
+    public RHythmComboOnNodeHit nodeEventCallback;
 
     #endregion
 
@@ -144,16 +148,14 @@ public class RhythmCombo : MonoBehaviour
             go.SetActive(false);
         }
         displayText[(int)result].SetActive(true);
+        nodeEventCallback(result);
 
         // Only care when the spawning process is finished as well
         // Invoke callback function when beatline has processed all spawned nodes
-        Debug.Log(spawnFinishedFlag);
-        Debug.Log(beatLine.nodeCount);
-        Debug.Log(nodeSpawner.spawnCount);
         if (spawnFinishedFlag && beatLine.nodeCount == nodeSpawner.spawnCount)
         {
             instance.comboResult = beatLine.rhythmResult;
-            callbackFunc();
+            finishedEventCallback();
         }
     }
 
@@ -171,6 +173,7 @@ public class RhythmCombo : MonoBehaviour
     /// <param name="combo"></param>
     public void Register(ComboPiece combo)
     {
+        currentPlayingPiece = combo;
         title.text = combo.musicName + " - " + combo.artistName;
         // icon = combo.icon
         nodeSpawner.PrepareNodes(combo.timeNodeArray);
@@ -183,7 +186,7 @@ public class RhythmCombo : MonoBehaviour
     public void Display()
     {
         Activate(true);
-        nodeSpawner.StartSpawning();
+        nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
 
     /// <summary>

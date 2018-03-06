@@ -9,8 +9,27 @@ public class InvokeRhythmCombo : MonoBehaviour
         RhythmCombo.instance.Test();
         RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
         RhythmCombo.instance.Display();
-        RhythmCombo.instance.callbackFunc = finished;
+        RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+        RhythmCombo.instance.finishedEventCallback = finished;
     }
+
+    void OnNodeHit(NodePressResult result)
+    {
+        switch (result)
+        {
+            case NodePressResult.PERFECT:
+            case NodePressResult.GOOD:
+                CrowdBar.instance.IncreaseToPlayer1(30);
+                break;
+            case NodePressResult.BAD:
+            case NodePressResult.MISS:
+            default:
+                CrowdBar.instance.IncreaseToPlayer2(30);
+                break;
+        }
+
+    }
+
 
     void finished()
     {

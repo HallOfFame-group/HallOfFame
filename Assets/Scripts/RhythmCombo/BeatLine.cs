@@ -69,9 +69,9 @@ public class BeatLine : MonoBehaviour
     private void Update()
     {
         // Right now just using space bar for detection
-        bool key1 = Input.GetAxis("RhythmKey1") != 0.0f;
-        bool key2 = Input.GetAxis("RhythmKey2") != 0.0f;
-        bool key3 = Input.GetAxis("RhythmKey3") != 0.0f;
+        bool key1 = Input.GetButtonDown("RhythmKey1");
+        bool key2 = Input.GetButtonDown("RhythmKey2");
+        bool key3 = Input.GetButtonDown("RhythmKey3");
 
         if ((key1 || key2) && nodeList.Count > 0)
         {

@@ -37,6 +37,10 @@ public class NodeSpawner : MonoBehaviour
     [SerializeField] private float travelSpeed = 1.5f;
 
     private GameObject[] spawnLine;
+    
+    [FMODUnity.EventRef]
+    private string musicPath;
+    private FMOD.Studio.EventInstance musicEvent;
     #endregion
 
     #region Private Methods
@@ -84,6 +88,13 @@ public class NodeSpawner : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator DelayAudioSource(string musicPath)
+    {
+        yield return new WaitForSeconds(travelSpeed);
+
+        musicEvent.start();
+    }
     #endregion
 
     #region Public Methods
@@ -94,10 +105,13 @@ public class NodeSpawner : MonoBehaviour
         ResetNodeSpawner();
     }
 
-    public void StartSpawning()
+    public void StartSpawning(string musicPath)
     {
         spawning = true;
         spawnCount = 0;
+        this.musicPath = musicPath;
+        musicEvent = FMODUnity.RuntimeManager.CreateInstance(musicPath);
+        StartCoroutine(DelayAudioSource(musicPath));
     }
 
     public void EndlinePosition(Vector3 endline)
