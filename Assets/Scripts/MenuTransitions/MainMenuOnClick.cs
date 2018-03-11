@@ -2,28 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Skye_UiControl : MonoBehaviour
-{
+
+public class MainMenuOnClick : MonoBehaviour {
 
     GameObject gameOverPanel;
     GameObject startMenu;
 
-    void Start() {
+    public void LoadMainMenu()
+    {
         gameOverPanel = transform.Find("GameOverPanel").gameObject;
         startMenu = transform.Find("StartMenu").gameObject;
-        gameOverPanel.SetActive(false);
-        Scene loadedLevel = SceneManager.GetActiveScene();
+        startMenu.gameObject.SetActive(true);
+        gameOverPanel.gameObject.SetActive(false);
     }
-
-    void Update()
-    {
-        if (Skye_TimeLeft.timeLeft <= 0)
-        {
-            gameOverPanel.SetActive(true);
-        }
-    }
-
-	
-
 
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Skye_TimeLeft : MonoBehaviour {
 
 	Text text;
-	public static float timeLeft = 1f;
+	public static float timeLeft = 3f;
 	void Start () {
 		text = GetComponent<Text> ();
 	}
