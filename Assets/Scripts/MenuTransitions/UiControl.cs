@@ -11,7 +11,7 @@ public class UiControl : MonoBehaviour
         gameOverPanel = transform.Find("GameOverPanel").gameObject;
         startMenu = transform.Find("StartMenu").gameObject;
         gameOverPanel.SetActive(false);
-        Scene loadedLevel = SceneManager.GetActiveScene();
+      
     }
 
     void Update()
@@ -20,6 +20,7 @@ public class UiControl : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
         }
+       
     }
 
 	
