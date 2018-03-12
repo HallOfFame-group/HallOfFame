@@ -107,7 +107,6 @@ public class NodeSpawner : MonoBehaviour
 
     public void StartSpawning(string musicPath)
     {
-        Debug.Log("Start Spawning");
         spawning = true;
         spawnCount = 0;
         this.musicPath = musicPath;

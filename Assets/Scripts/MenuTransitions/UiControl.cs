@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Skye_UiControl : MonoBehaviour
+public class UiControl : MonoBehaviour
 {
-
     GameObject gameOverPanel;
     GameObject startMenu;
 
@@ -17,7 +16,7 @@ public class Skye_UiControl : MonoBehaviour
 
     void Update()
     {
-        if (Skye_TimeLeft.timeLeft <= 0)
+        if (TimeLeft.timeLeft <= 0)
         {
             gameOverPanel.SetActive(true);
         }

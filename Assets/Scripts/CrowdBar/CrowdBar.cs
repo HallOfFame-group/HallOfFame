@@ -54,7 +54,6 @@ public class CrowdBar : MonoBehaviour
 
     public void IncreaseToPlayer1(int value)
     {
-        Debug.Log(value);
         crowdExcitementValue += value;
         if (crowdExcitementValue > 100)
         {

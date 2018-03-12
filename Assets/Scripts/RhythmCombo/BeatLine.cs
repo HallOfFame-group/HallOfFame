@@ -49,7 +49,6 @@ public class BeatLine : MonoBehaviour
     // When a node enters the detection region, register it to the list
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         nodeList.Add(collision.gameObject);
     }
 

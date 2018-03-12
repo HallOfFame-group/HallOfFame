@@ -164,7 +164,6 @@ public class RhythmCombo : MonoBehaviour
     #region Public Methods
     public void Test()
     {
-        Debug.Log("Testing");
     }
 
     /// <summary>
