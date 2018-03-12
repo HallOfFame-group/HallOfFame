@@ -19,6 +19,8 @@ public class BeatLine : MonoBehaviour
     [SerializeField] private float perfectAllowanceRange = 1;
     [SerializeField] private float goodAllowanceRange = 2;
     [SerializeField] private float badAllowanceRange = 3;
+
+    private int playerNum = 0;
     #endregion
 
     #region Public Members
@@ -68,10 +70,10 @@ public class BeatLine : MonoBehaviour
 
     private void Update()
     {
-        // Right now just using space bar for detection
-        bool key1 = Input.GetButtonDown("RhythmKey1");
-        bool key2 = Input.GetButtonDown("RhythmKey2");
-        bool key3 = Input.GetButtonDown("RhythmKey3");
+        // Right now just using space bar for detection        
+        bool key1 = Input.GetButtonDown("360Controller0_RhythmKeyA") || Input.GetButtonDown("360Controller" + playerNum + "_RhythmKeyA");
+        bool key2 = Input.GetButtonDown("360Controller0_RhythmKeyB") || Input.GetButtonDown("360Controller" + playerNum + "_RhythmKeyB");
+        bool key3 = Input.GetButtonDown("360Controller0_RhythmKeyY") || Input.GetButtonDown("360Controller" + playerNum + "_RhythmKeyY");
 
         if ((key1 || key2 || key3) && nodeList.Count > 0)
         {
@@ -123,6 +125,13 @@ public class BeatLine : MonoBehaviour
             // Notify the caller a node has been processed
             callbackFunc(result);
         }
+    }
+    #endregion
+
+    #region Public Methods
+    public void RegisterPlayerNum(int playerNum)
+    {
+        this.playerNum = playerNum;
     }
     #endregion
 }

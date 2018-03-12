@@ -8,7 +8,7 @@ public class InvokeRhythmCombo : MonoBehaviour
     {
         RhythmCombo.instance.Test();
         RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-        RhythmCombo.instance.Display();
+        RhythmCombo.instance.Display(1);
         RhythmCombo.instance.nodeEventCallback = OnNodeHit;
         RhythmCombo.instance.finishedEventCallback = finished;
     }

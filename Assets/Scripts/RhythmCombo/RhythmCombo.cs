@@ -183,9 +183,10 @@ public class RhythmCombo : MonoBehaviour
     /// <summary>
     /// Display the rhythm combo on screen
     /// </summary>
-    public void Display()
+    public void Display(int playerNum)
     {
         Activate(true);
+        beatLine.RegisterPlayerNum(playerNum);
         nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
 
