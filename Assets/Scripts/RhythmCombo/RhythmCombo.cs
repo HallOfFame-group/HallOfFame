@@ -103,7 +103,7 @@ public class RhythmCombo : MonoBehaviour
         nodeSpawner.callbackFunc = SpawnFinished;
         beatLine.callbackFunc = NodeProcessed;
 
-        // Provide node spawner reference of beatline for calculating traveling speed
+        // Provide node spawner additional information for screen size variants
         nodeSpawner.EndlinePosition(beatLineLocation);
 
         // Obtain visual feed back elements for node pressed event

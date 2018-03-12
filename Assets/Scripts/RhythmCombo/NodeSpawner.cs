@@ -36,7 +36,7 @@ public class NodeSpawner : MonoBehaviour
     [Range(0.1f, 2.0f)]
     [SerializeField] private float travelSpeed = 1.5f;
 
-    private GameObject[] spawnLine;
+    private Vector3[] spawnLine;
     
     [FMODUnity.EventRef]
     private string musicPath;
@@ -55,10 +55,10 @@ public class NodeSpawner : MonoBehaviour
         ResetNodeSpawner();
 
         // Obtain different spawn line
-        spawnLine = new GameObject[3];
-        spawnLine[0] = transform.Find("TopLine").gameObject;
-        spawnLine[1] = transform.Find("MidLine").gameObject;
-        spawnLine[2] = transform.Find("BotLine").gameObject;
+        spawnLine = new Vector3[3];
+        spawnLine[(int)NodeButton.A] = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
+        spawnLine[(int)NodeButton.B] = transform.position;
+        spawnLine[(int)NodeButton.Y] = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
     }
 
     private void Update()
@@ -72,7 +72,7 @@ public class NodeSpawner : MonoBehaviour
             if (timeNodes[spawnCount].timeStamp - travelSpeed <= elapsedTime)
             {
                 // Instantiate beat node
-                BeatNode node = Instantiate(beatNode, spawnLine[(int)timeNodes[spawnCount].nodeButton].transform).GetComponent<BeatNode>();
+                BeatNode node = Instantiate(beatNode, spawnLine[(int)timeNodes[spawnCount].nodeButton], Quaternion.identity).GetComponent<BeatNode>();
                 node.keyCode = timeNodes[spawnCount].nodeButton;
                 node.StartNode(endlineDistance, travelSpeed);
 
@@ -107,6 +107,7 @@ public class NodeSpawner : MonoBehaviour
 
     public void StartSpawning(string musicPath)
     {
+        Debug.Log("Start Spawning");
         spawning = true;
         spawnCount = 0;
         this.musicPath = musicPath;

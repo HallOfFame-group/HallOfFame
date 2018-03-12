@@ -24,6 +24,7 @@ public class BeatNode : MonoBehaviour
 
     [SerializeField] private Sprite btnA;
     [SerializeField] private Sprite btnB;
+    [SerializeField] private Sprite btnY;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -45,7 +46,7 @@ public class BeatNode : MonoBehaviour
         }
         else
         {
-            spriteRenderer.sprite = btnB;
+            spriteRenderer.sprite = btnY;
         }
         start = true;
     }

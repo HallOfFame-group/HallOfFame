@@ -73,7 +73,7 @@ public class BeatLine : MonoBehaviour
         bool key2 = Input.GetButtonDown("RhythmKey2");
         bool key3 = Input.GetButtonDown("RhythmKey3");
 
-        if ((key1 || key2) && nodeList.Count > 0)
+        if ((key1 || key2 || key3) && nodeList.Count > 0)
         {
             NodePressResult result = NodePressResult.MISS;
 
