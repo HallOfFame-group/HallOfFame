@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class RestartOnClick : MonoBehaviour {
-    Scene loadedLevel = SceneManager.GetActiveScene();
-    public void RerestartScene(Scene loadedLevel)
+public class RestartOnClick : MonoBehaviour
+{
+    int loadedLevel;
+    private void Awake()
     {
-        
-        SceneManager.LoadScene(loadedLevel.buildIndex);
-
+        loadedLevel = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(loadedLevel);
+    }
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(2);
     }
 }
