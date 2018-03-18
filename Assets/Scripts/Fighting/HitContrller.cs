@@ -16,7 +16,7 @@ public class HitContrller : MonoBehaviour {
     public Text test;
 
     private string[] Attack_Name = { "Punch1", "Punch2", "Punch3", "Kick1", "Kick2", "Head Smash", "Duck Punch", "Duck Kick", "Jump Punch", "Jump Punch", "Jump Kick" };
-    private float[] Attack_HitTime = { 1f, 1f, 1f, 1f, 1f,1f,1f,1f,1f,1f};
+    private float[] Attack_HitTime = { 1f, 0.1f, 0.1f, 1f, 1f,1f,1f,1f,1f,1f};
 
 
     private void Awake()
@@ -48,12 +48,12 @@ public class HitContrller : MonoBehaviour {
                         opponentHitController.hitTimer = Attack_HitTime[i];
                         opponentAnimator.SetTrigger("Hit Up");
 
-                        if(opponentHitController.hits > 7)
+                        if (opponentHitController.hits > 7)
                         {
-                            //    RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-                            //    RhythmCombo.instance.Display();
-                            //    RhythmCombo.instance.nodeEventCallback = OnNodeHit;
-                            //    RhythmCombo.instance.finishedEventCallback = finished;
+                            RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
+                            RhythmCombo.instance.Display(playerController.PlayerNumber);
+                            RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+                            RhythmCombo.instance.finishedEventCallback = finished;
                         }
                     }
                 }
@@ -88,4 +88,33 @@ public class HitContrller : MonoBehaviour {
     //{
     //    Debug.Log(collision.collider.name);
     //}
+
+
+    void OnNodeHit(NodePressResult result)
+    {
+        switch (result)
+        {
+            case NodePressResult.PERFECT:
+            case NodePressResult.GOOD:
+                CrowdBar.instance.IncreaseToPlayer1(30);
+                break;
+            case NodePressResult.BAD:
+            case NodePressResult.MISS:
+            default:
+                CrowdBar.instance.IncreaseToPlayer2(30);
+                break;
+        }
+
+    }
+
+
+    void finished()
+    {
+        Debug.Log("Finished");
+        Debug.Log(RhythmCombo.instance.comboResult.perfectCount);
+        Debug.Log(RhythmCombo.instance.comboResult.goodCount);
+        Debug.Log(RhythmCombo.instance.comboResult.badCount);
+        Debug.Log(RhythmCombo.instance.comboResult.missCount);
+        CrowdBar.instance.IncreaseToPlayer1(30);
+    }
 }
