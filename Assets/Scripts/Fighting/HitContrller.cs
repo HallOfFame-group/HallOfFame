@@ -96,12 +96,12 @@ public class HitContrller : MonoBehaviour {
         {
             case NodePressResult.PERFECT:
             case NodePressResult.GOOD:
-                CrowdBar.instance.IncreaseToPlayer1(30);
+                CrowdBar.instance.IncreaseToPlayer1(2);
                 break;
             case NodePressResult.BAD:
             case NodePressResult.MISS:
             default:
-                CrowdBar.instance.IncreaseToPlayer2(30);
+                CrowdBar.instance.IncreaseToPlayer2(2);
                 break;
         }
 

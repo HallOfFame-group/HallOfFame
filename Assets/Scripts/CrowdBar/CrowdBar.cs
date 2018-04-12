@@ -52,6 +52,8 @@ public class CrowdBar : MonoBehaviour
         crowdImg = transform.Find("CrowdImg").gameObject;
     }
 
+    
+
     public void IncreaseToPlayer1(int value)
     {
         crowdExcitementValue += value;
@@ -80,5 +82,7 @@ public class CrowdBar : MonoBehaviour
     {
         UpdateTargetLocation();
         crowdImg.GetComponent<RectTransform>().localPosition = Vector3.Lerp(crowdImg.GetComponent<RectTransform>().localPosition, targetLocation, 0.1f);
+
+
     }
 }

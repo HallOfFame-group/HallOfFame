@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114475346293187284}
-  - {fileID: 114955168904032996}
-  - {fileID: 114368521191920080}
-  - {fileID: 114215412044817620}
+  - {fileID: 114690815278589402}
+  - {fileID: 114763252123820028}
+  - {fileID: 114659055094871920}
   EditorEvents:
   - {fileID: 114818548939390884}
   - {fileID: 114666117058309554}
@@ -25,9 +25,9 @@ MonoBehaviour:
   - {fileID: 114717701709549704}
   - {fileID: 114787729944238252}
   - {fileID: 114490862609740640}
-  MasterBankRef: {fileID: 114955168904032996}
+  MasterBankRef: {fileID: 114690815278589402}
   StringsBankRef: {fileID: 114475346293187284}
-  stringsBankWriteTime: 636562924431997480
+  stringsBankWriteTime: 636564623604368691
   cacheVersion: 2
 --- !u!114 &114093647067370656
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: HallOfFame\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636562924431997480
+  lastModified: 636564623604368691
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -210,7 +210,7 @@ MonoBehaviour:
   Path: event:/Mozart - Piano Concerto 20 Lead
   guid: 58d43c4fce63354fb06c5db875c4af60
   Banks:
-  - {fileID: 114215412044817620}
+  - {fileID: 114659055094871920}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -266,7 +266,7 @@ MonoBehaviour:
   Path: event:/Beethoven Piano Concerto 3 Lead
   guid: 9527e706cf30894a9ce51e3cb141b014
   Banks:
-  - {fileID: 114368521191920080}
+  - {fileID: 114763252123820028}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -274,6 +274,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6060
+--- !u!114 &114659055094871920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\SShen\Desktop\HallOfFame\HallOfFame\Build\Desktop\Mozart.bank
+  lastModified: 636564623604448842
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 640000
+  Exists: 1
 --- !u!114 &114664421101746502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +324,7 @@ MonoBehaviour:
   Path: event:/Beethoven Symphony 5 Main
   guid: 85a28e357f167e43ac67947ddcb3a1aa
   Banks:
-  - {fileID: 114368521191920080}
+  - {fileID: 114763252123820028}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -351,6 +369,24 @@ MonoBehaviour:
   - Name: 
     Value: 173888
   Exists: 1
+--- !u!114 &114690815278589402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\SShen\Desktop\HallOfFame\HallOfFame\Build\Desktop\Master Bank.bank
+  lastModified: 636564623604348579
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
 --- !u!114 &114696263749295350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +419,7 @@ MonoBehaviour:
   Path: event:/Mozart Symphony 40 Lead
   guid: 299f1b897e6cd849876183087d3a214c
   Banks:
-  - {fileID: 114215412044817620}
+  - {fileID: 114659055094871920}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -405,7 +441,7 @@ MonoBehaviour:
   Path: event:/Mozart Symphony 40 Main
   guid: 3be2116218e9194293391452f0cb5a62
   Banks:
-  - {fileID: 114215412044817620}
+  - {fileID: 114659055094871920}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -427,7 +463,7 @@ MonoBehaviour:
   Path: event:/Beethoven Piano Concerto 3 Main
   guid: f8083533120b1f45bffb4f112910ac26
   Banks:
-  - {fileID: 114368521191920080}
+  - {fileID: 114763252123820028}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -435,6 +471,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 11263
+--- !u!114 &114763252123820028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\SShen\Desktop\HallOfFame\HallOfFame\Build\Desktop\Beethoven.bank
+  lastModified: 636564623604333588
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 377824
+  Exists: 1
 --- !u!114 &114787729944238252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +503,7 @@ MonoBehaviour:
   Path: event:/Mozart - Piano Concerto 20 Main
   guid: 518f4b131a02b24bb5377efc324327ab
   Banks:
-  - {fileID: 114215412044817620}
+  - {fileID: 114659055094871920}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -471,7 +525,7 @@ MonoBehaviour:
   Path: event:/Beethoven Symphony 5 Lead
   guid: 439395e523ced54aab3be787c52a9779
   Banks:
-  - {fileID: 114368521191920080}
+  - {fileID: 114763252123820028}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

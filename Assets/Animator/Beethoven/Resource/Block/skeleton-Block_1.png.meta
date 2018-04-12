@@ -1,9 +1,12 @@
 fileFormatVersion: 2
 guid: 07e62489537759d41804ee76a106d326
-timeCreated: 1519696461
+timeCreated: 1522824792
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: skeleton-Block_1_0
+    21300002: skeleton-Block_1_1
+    21300004: skeleton-Block_1_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
