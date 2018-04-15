@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Spine;
+using Spine.Unity;
 
 /*
  * Author: Jason Lin
@@ -14,9 +16,13 @@ using UnityEngine.UI;
  */
 public class CrowdBar : MonoBehaviour
 {
+    [SerializeField]
+    private SkeletonAnimation player1;
+
+    [SerializeField]
+    private SkeletonAnimation player2;
+
     private static CrowdBar crowdBar;
-    private GameObject crowdImg;
-    private Vector3 targetLocation;
 
     public static CrowdBar instance
     {
@@ -39,50 +45,21 @@ public class CrowdBar : MonoBehaviour
         }
     }
 
-    public int crowdExcitementValue;
-
     private void Init()
     {
-        targetLocation = Vector3.zero;
-        crowdExcitementValue = 0;
     }
 
     private void Awake()
     {
-        crowdImg = transform.Find("CrowdImg").gameObject;
     }
-
-    
 
     public void IncreaseToPlayer1(int value)
     {
-        crowdExcitementValue += value;
-        if (crowdExcitementValue > 100)
-        {
-            crowdExcitementValue = 100;
-        }
+        player1.GetComponent<CrowdAnimControl>().IncreaseByValue(3);
     }
 
     public void IncreaseToPlayer2(int value)
     {
-        crowdExcitementValue -= value;
-        if (crowdExcitementValue < -100)
-        {
-            crowdExcitementValue = -100;
-        }
-    }
-
-    private void UpdateTargetLocation()
-    {
-        float targetX = crowdExcitementValue / 100.0f * 763;
-        targetLocation = new Vector3(targetX, 0, 0);
-    }
-
-    private void Update()
-    {
-        UpdateTargetLocation();
-        crowdImg.GetComponent<RectTransform>().localPosition = Vector3.Lerp(crowdImg.GetComponent<RectTransform>().localPosition, targetLocation, 0.1f);
-
-
+        player2.GetComponent<CrowdAnimControl>().IncreaseByValue(3);
     }
 }
