@@ -21,6 +21,8 @@ public class BeatLine : MonoBehaviour
     [SerializeField] private float badAllowanceRange = 3;
 
     private int playerNum = 0;
+
+    private NodeResultTextUIControl nodeResultUI;
     #endregion
 
     #region Public Members
@@ -44,26 +46,40 @@ public class BeatLine : MonoBehaviour
         nodeList = new List<GameObject>();
         rhythmResult = new RhythmResult();
         nodeCount = 0;
+
+        nodeResultUI = FindObjectOfType<NodeResultTextUIControl>();
+    }
+
+    private void OnEnable()
+    {
+        nodeResultUI.gameObject.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        nodeResultUI.gameObject.SetActive(false);
     }
 
     // When a node enters the detection region, register it to the list
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        nodeList.Add(collision.gameObject);
+        nodeList.Add(collision.transform.parent.gameObject);
     }
 
     // When a node leaves the detection region, destroy it, mark as miss, and increase total count
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Remoe from list
-        nodeList.Remove(collision.gameObject);
-        Destroy(collision.gameObject);
+        nodeList.Remove(collision.transform.parent.gameObject);
+        Destroy(collision.transform.parent.gameObject);
 
         // Count as miss
         ++rhythmResult.missCount;
 
         // Increment total count and calls to caller
         ++nodeCount;
+
+        nodeResultUI.Display(NodePressResult.MISS);
         callbackFunc(NodePressResult.MISS);
     }
 
@@ -120,6 +136,8 @@ public class BeatLine : MonoBehaviour
 
             // Increase the total count
             ++nodeCount;
+
+            nodeResultUI.Display(result);
 
             // Notify the caller a node has been processed
             callbackFunc(result);
