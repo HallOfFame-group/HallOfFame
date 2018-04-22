@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9ad3bd40ac2f0ae4a94d17be8c2f71f5
+timeCreated: 1524356099
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pirate Keg Italic
+  fontNames:
+  - Pirate Keg Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

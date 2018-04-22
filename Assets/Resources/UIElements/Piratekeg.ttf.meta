@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: da35153c7e3d8ed4a99d162cb0ac3b3f
+timeCreated: 1524356099
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pirate Keg
+  fontNames:
+  - Pirate Keg
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
