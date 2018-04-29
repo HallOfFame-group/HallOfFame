@@ -1,0 +1,153 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Crowd_0000_Black-Hand-3
+  rotate: false
+  xy: 524, 121
+  size: 85, 189
+  orig: 85, 189
+  offset: 0, 0
+  index: -1
+Crowd_0001_Black-Hand-1
+  rotate: true
+  xy: 652, 619
+  size: 74, 171
+  orig: 74, 171
+  offset: 0, 0
+  index: -1
+Crowd_0002_Black-Hand-6
+  rotate: true
+  xy: 2, 2
+  size: 67, 227
+  orig: 67, 227
+  offset: 0, 0
+  index: -1
+Crowd_0003_Black-Hand-4
+  rotate: true
+  xy: 727, 807
+  size: 58, 228
+  orig: 58, 228
+  offset: 0, 0
+  index: -1
+Crowd_0004_Black-Hand-5
+  rotate: false
+  xy: 247, 88
+  size: 150, 206
+  orig: 150, 206
+  offset: 0, 0
+  index: -1
+Crowd_0005_Black-Hand-2
+  rotate: false
+  xy: 229, 296
+  size: 162, 207
+  orig: 162, 207
+  offset: 0, 0
+  index: -1
+Crowd_0006_Black-1
+  rotate: true
+  xy: 411, 860
+  size: 159, 314
+  orig: 159, 314
+  offset: 0, 0
+  index: -1
+Crowd_0007_Black-2
+  rotate: true
+  xy: 727, 867
+  size: 152, 267
+  orig: 152, 267
+  offset: 0, 0
+  index: -1
+Crowd_0008_Black-3
+  rotate: true
+  xy: 2, 71
+  size: 169, 243
+  orig: 169, 243
+  offset: 0, 0
+  index: -1
+Crowd_0009_Blcak-4
+  rotate: false
+  xy: 2, 459
+  size: 225, 314
+  orig: 225, 314
+  offset: 0, 0
+  index: -1
+Crowd_0010_Black-5
+  rotate: true
+  xy: 393, 601
+  size: 125, 257
+  orig: 125, 257
+  offset: 0, 0
+  index: -1
+Crowd_0011_Black-6
+  rotate: true
+  xy: 411, 728
+  size: 130, 267
+  orig: 130, 267
+  offset: 0, 0
+  index: -1
+Crowd_0012_Grey-Hand-5
+  rotate: true
+  xy: 680, 745
+  size: 60, 203
+  orig: 60, 203
+  offset: 0, 0
+  index: -1
+Crowd_0013_Grey-Hand-2
+  rotate: true
+  xy: 680, 695
+  size: 48, 190
+  orig: 48, 190
+  offset: 0, 0
+  index: -1
+Crowd_0014_Grey-Hand-3
+  rotate: true
+  xy: 652, 551
+  size: 66, 169
+  orig: 66, 169
+  offset: 0, 0
+  index: -1
+Crowd_0015_Flag
+  rotate: false
+  xy: 2, 242
+  size: 219, 215
+  orig: 219, 215
+  offset: 0, 0
+  index: -1
+Crowd_0016_Grey-1
+  rotate: false
+  xy: 229, 505
+  size: 162, 268
+  orig: 162, 268
+  offset: 0, 0
+  index: -1
+Crowd_0017_Grey-2
+  rotate: false
+  xy: 399, 97
+  size: 123, 213
+  orig: 123, 213
+  offset: 0, 0
+  index: -1
+Crowd_0018_Grey-3
+  rotate: true
+  xy: 393, 465
+  size: 134, 224
+  orig: 134, 224
+  offset: 0, 0
+  index: -1
+Crowd_0019_Grey-4
+  rotate: true
+  xy: 393, 312
+  size: 151, 222
+  orig: 151, 222
+  offset: 0, 0
+  index: -1
+Crowd_0020_Grey-5
+  rotate: false
+  xy: 2, 775
+  size: 407, 244
+  orig: 407, 244
+  offset: 0, 0
+  index: -1
