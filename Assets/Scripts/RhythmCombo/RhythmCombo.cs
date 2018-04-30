@@ -31,6 +31,8 @@ public class RhythmCombo : MonoBehaviour
     private bool spawnFinishedFlag = false;
 
     private ComboPiece currentPlayingPiece;
+
+    private int playerNum = 0;
     #endregion
 
     #region Public Members
@@ -143,6 +145,11 @@ public class RhythmCombo : MonoBehaviour
     public void Display(int playerNum)
     {
         Activate(true);
+        this.playerNum = playerNum;
+    }
+
+    public void RolloutAnimFinshedHandler()
+    {
         beatline.RegisterPlayerNum(playerNum);
         nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
