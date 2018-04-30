@@ -56,9 +56,10 @@ public class NodeSpawner : MonoBehaviour
 
         // Obtain different spawn line
         spawnLine = new Vector3[3];
-        spawnLine[(int)NodeButton.A] = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
+        Debug.Log(this.transform.position);
+        spawnLine[(int)NodeButton.A] = new Vector3(transform.position.x, transform.position.y - 1.4f, transform.position.z - 1);
         spawnLine[(int)NodeButton.B] = transform.position;
-        spawnLine[(int)NodeButton.Y] = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        spawnLine[(int)NodeButton.Y] = new Vector3(transform.position.x, transform.position.y + 1.6f, transform.position.z - 1);
     }
 
     private void Update()

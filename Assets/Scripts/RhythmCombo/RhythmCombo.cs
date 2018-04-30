@@ -17,27 +17,13 @@ public class RhythmCombo : MonoBehaviour
     // Singleton reference to rhythm combo script
     private static RhythmCombo rhythmCombo;
 
-    // RhythmCombo container reference
-    private static Transform container;
-
-    // Musician profile icon image
-    private static Image icon;
-
-    // Music title and artist
-    private static Text title;
-
-    // NodeSpanwer location translated from screen location to gameworld location
-    [SerializeField] private GameObject nodeSpawnerObject;
+    // RhythmCombo component reference
+    private GameObject panel;
     private NodeSpawner nodeSpawner;
-    private Vector3 spawnLocation;
-
-    // Beat detection line location translated from screen location to gameworld location
-    [SerializeField] private GameObject beatLineObject;
-    private BeatLine beatLine;
-    private Vector3 beatLineLocation;
+    private BeatLine beatline;
 
     // GUI reference to node press result
-    private GameObject [] displayText;
+    private MusicTitleUIControl musicUI;
 
     // Contains combo result obtained from beat line object
     public RhythmResult comboResult;
@@ -45,6 +31,8 @@ public class RhythmCombo : MonoBehaviour
     private bool spawnFinishedFlag = false;
 
     private ComboPiece currentPlayingPiece;
+
+    private int playerNum = 0;
     #endregion
 
     #region Public Members
@@ -82,54 +70,32 @@ public class RhythmCombo : MonoBehaviour
     #endregion
 
     #region Non-Public Methods
-    protected void Init()
+    private void Awake()
     {
-        // Obtain private references to GUI elements under Canvas
-        container = transform.Find("RhythmCombo");
-        icon = container.Find("Icon").GetComponent<Image>();
-        title = container.Find("Title").Find("MusicTitleText").GetComponent<Text>();
+        panel = transform.Find("Panel").gameObject;
+        nodeSpawner = FindObjectOfType<NodeSpawner>();
+        beatline = FindObjectOfType<BeatLine>();
+        nodeSpawner.EndlinePosition(beatline.gameObject.transform.position);
 
-        // Obtain references to gaming GUI elements
-        Transform nodePanel = container.Find("NodePanel");
-        Transform beatline = nodePanel.Find("BeatLine");
-        beatLineLocation = beatline.position;
-        spawnLocation = nodePanel.Find("Spawner").position;
-
-        // Spawn Rhythm Combo non-UI prefabs for processing in-game events
-        nodeSpawner = Instantiate<GameObject>(nodeSpawnerObject, spawnLocation, new Quaternion()).GetComponent<NodeSpawner>();
-        beatLine = Instantiate<GameObject>(beatLineObject, beatLineLocation, new Quaternion()).GetComponent<BeatLine>();
-
-        // Register callback event handlers
+        beatline.callbackFunc = NodeProcessed;
         nodeSpawner.callbackFunc = SpawnFinished;
-        beatLine.callbackFunc = NodeProcessed;
-
-        // Provide node spawner additional information for screen size variants
-        nodeSpawner.EndlinePosition(beatLineLocation);
 
         // Obtain visual feed back elements for node pressed event
-        displayText = new GameObject[4];
-
-        displayText[0] = beatline.Find("PerfectText").gameObject;
-        displayText[1] = beatline.Find("GoodText").gameObject;
-        displayText[2] = beatline.Find("BadText").gameObject;
-        displayText[3] = beatline.Find("MissText").gameObject;
-
-        // Deactivate all visual components
-        foreach(GameObject go in displayText)
-        {
-            go.SetActive(false);
-        }
+        musicUI = FindObjectOfType<MusicTitleUIControl>();
 
         // By default, hides the UI elements
         Activate(false);
     }
 
+    protected void Init()
+    {
+    }
+
     // Set Rhythm combo active or not
     private void Activate(bool active)
     {
-        container.gameObject.SetActive(active);
-        nodeSpawner.gameObject.SetActive(active);
-        beatLine.gameObject.SetActive(active);
+        panel.SetActive(active);
+        musicUI.gameObject.SetActive(active);
     }
 
     // Handling NodeSpawner callback, marks the node spawner has finished spawning process, awaiting for beatline
@@ -143,18 +109,13 @@ public class RhythmCombo : MonoBehaviour
     private void NodeProcessed(NodePressResult result)
     {
         // Disable all visual UI, then display the correct one
-        foreach(GameObject go in displayText)
-        {
-            go.SetActive(false);
-        }
-        displayText[(int)result].SetActive(true);
         nodeEventCallback(result);
 
         // Only care when the spawning process is finished as well
         // Invoke callback function when beatline has processed all spawned nodes
-        if (spawnFinishedFlag && beatLine.nodeCount == nodeSpawner.spawnCount)
+        if (spawnFinishedFlag && beatline.nodeCount == nodeSpawner.spawnCount)
         {
-            instance.comboResult = beatLine.rhythmResult;
+            instance.comboResult = beatline.rhythmResult;
             finishedEventCallback();
         }
     }
@@ -173,8 +134,7 @@ public class RhythmCombo : MonoBehaviour
     public void Register(ComboPiece combo)
     {
         currentPlayingPiece = combo;
-        title.text = combo.musicName + " - " + combo.artistName;
-        // icon = combo.icon
+        //title.text = combo.musicName + " - " + combo.artistName;
         nodeSpawner.PrepareNodes(combo.timeNodeArray);
         spawnFinishedFlag = false;
     }
@@ -185,7 +145,12 @@ public class RhythmCombo : MonoBehaviour
     public void Display(int playerNum)
     {
         Activate(true);
-        beatLine.RegisterPlayerNum(playerNum);
+        this.playerNum = playerNum;
+    }
+
+    public void RolloutAnimFinshedHandler()
+    {
+        beatline.RegisterPlayerNum(playerNum);
         nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
 
