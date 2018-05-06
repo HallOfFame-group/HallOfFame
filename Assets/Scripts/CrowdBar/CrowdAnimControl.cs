@@ -27,6 +27,7 @@ public class CrowdAnimControl : MonoBehaviour
         if (targetName != anim.AnimationName)
         {
             anim.state.SetAnimation(0, targetName, true);
+
         }
     }
 
