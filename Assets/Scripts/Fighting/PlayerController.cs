@@ -25,19 +25,42 @@ public class PlayerController : MonoBehaviour {
         positionBox = transform.Find("Animator").Find("PositionBox").GetComponent<BoxCollider2D>();
     }
 
+    private void Update()
+    {
+
+        if (Input.GetButton("360Controller" + PlayerNumber + "_Block") || Input.GetButton("Keyboard_Block"))
+        {
+            IsBlocking = true;
+            animator.SetBool("isBlocking", true);
+        }
+        else
+        {
+            IsBlocking = false;
+            animator.SetBool("isBlocking", false);
+        }
+
+
+        if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Punch") || Input.GetButtonDown("Keyboard_Punch"))
+            animator.SetTrigger("Punch");
+
+        if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Kick") || Input.GetButtonDown("Keyboard_Kick"))
+            animator.SetTrigger("Kick");
+
+
+    }
 
     private void FixedUpdate()
     {
 
         if (target != null&&IsGrounded)
         {
-            if (transform.position.x < target.position.x)
+            if (transform.position.x > target.position.x)
             {
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.rotation = Quaternion.Euler(0,180,0);
             }
             else
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.rotation = Quaternion.identity;
             }
         }
 
@@ -74,25 +97,6 @@ public class PlayerController : MonoBehaviour {
             IsCrouching = false;
             animator.SetBool("isCrouching", false);
         }
-
-        if (Input.GetButton("360Controller"+ PlayerNumber + "_Block") || Input.GetButton("Keyboard_Block"))
-        {
-            IsBlocking = true;
-            animator.SetBool("isBlocking", true);
-        }
-        else
-        {
-            IsBlocking = false;
-            animator.SetBool("isBlocking", false);
-        }
-        
-
-        if (Input.GetButtonDown("360Controller"+ PlayerNumber + "_Punch") || Input.GetButtonDown("Keyboard_Punch"))
-            animator.SetTrigger("Punch");
-
-        if (Input.GetButtonDown("360Controller"+ PlayerNumber + "_Kick") || Input.GetButtonDown("Keyboard_Kick"))
-            animator.SetTrigger("Kick");
-
 
 
     }

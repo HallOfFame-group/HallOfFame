@@ -16,7 +16,7 @@ public class HitContrller : MonoBehaviour {
     public Text test;
 
     private string[] Attack_Name = { "Punch1", "Punch2", "Punch3", "Kick1", "Kick2", "Head Smash", "Duck Punch", "Duck Kick", "Jump Punch", "Jump Punch", "Jump Kick" };
-    private float[] Attack_HitTime = { 1f, 0.1f, 0.1f, 1f, 1f,1f,1f,1f,1f,1f};
+    private float[] Attack_HitTime = { 0.3f, 0.1f, 0.1f, 1f, 1f,1f,1f,1f,1f,1f,1f};
 
 
     private void Awake()
