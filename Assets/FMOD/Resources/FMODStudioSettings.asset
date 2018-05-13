@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 0
   HasPlatforms: 0
-  sourceProjectPath: HallOfFame\HallOfFame.fspro
-  SourceProjectPathUnformatted: HallOfFame\HallOfFame.fspro
-  SourceBankPathUnformatted: HallOfFame\Build\Desktop
+  sourceProjectPath: Assets\HallOfFame\HallOfFame.fspro
+  SourceProjectPathUnformatted: Assets\HallOfFame\HallOfFame.fspro
+  SourceBankPathUnformatted: Assets\HallOfFame\Build\Desktop
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -59,3 +59,4 @@ MonoBehaviour:
   Banks:
   - Beethoven
   - Mozart
+  - SFX
