@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSoundManager : MonoBehaviour {
+public class CharacterSoundManager : MonoBehaviour
+{
 
     string footstepPath;
     string lightpunchPath;
@@ -17,7 +18,8 @@ public class CharacterSoundManager : MonoBehaviour {
     FMOD.Studio.EventInstance kick;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         footstepPath = "event:/SFX/Character/Footstep";
         lightpunchPath = "event:/SFX/Character/Light Punch Whoosh";
@@ -33,13 +35,14 @@ public class CharacterSoundManager : MonoBehaviour {
 
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+
     public void Footfall()
     {
         footstep.start();
@@ -84,3 +87,4 @@ public class CharacterSoundManager : MonoBehaviour {
     {
 
     }
+}
