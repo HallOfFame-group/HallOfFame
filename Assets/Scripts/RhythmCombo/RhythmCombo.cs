@@ -23,7 +23,7 @@ public class RhythmCombo : MonoBehaviour
     private BeatLine beatline;
 
     // GUI reference to node press result
-    private MusicTitleUIControl musicUI;
+    // private MusicTitleUIControl musicUI;
 
     // Contains combo result obtained from beat line object
     public RhythmResult comboResult;
@@ -81,7 +81,7 @@ public class RhythmCombo : MonoBehaviour
         nodeSpawner.callbackFunc = SpawnFinished;
 
         // Obtain visual feed back elements for node pressed event
-        musicUI = FindObjectOfType<MusicTitleUIControl>();
+        // musicUI = FindObjectOfType<MusicTitleUIControl>();
 
         // By default, hides the UI elements
         Activate(false);
@@ -95,7 +95,7 @@ public class RhythmCombo : MonoBehaviour
     private void Activate(bool active)
     {
         panel.SetActive(active);
-        musicUI.gameObject.SetActive(active);
+        // musicUI.gameObject.SetActive(active);
     }
 
     // Handling NodeSpawner callback, marks the node spawner has finished spawning process, awaiting for beatline
