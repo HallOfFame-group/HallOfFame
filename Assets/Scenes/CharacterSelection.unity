@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unselectedColor: {r: 1, g: 1, b: 1, a: 1}
-  player1Color: {r: 1, g: 0, b: 0, a: 1}
+  player1Color: {r: 1, g: 0, b: 0, a: 0}
   player2Color: {r: 0.24137926, g: 0, b: 1, a: 1}
 --- !u!1 &554269288
 GameObject:
@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 584108137}
   - component: {fileID: 584108136}
   - component: {fileID: 584108135}
+  - component: {fileID: 584108138}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -397,6 +398,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584108133}
+--- !u!114 &584108138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584108133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 0
 --- !u!1 &678760226
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +421,7 @@ GameObject:
   - component: {fileID: 678760230}
   - component: {fileID: 678760229}
   - component: {fileID: 678760228}
+  - component: {fileID: 678760231}
   m_Layer: 0
   m_Name: Beethovan
   m_TagString: Untagged
@@ -507,6 +521,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678760226}
+--- !u!114 &678760231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678760226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 1
 --- !u!1 &707771632
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +544,7 @@ GameObject:
   - component: {fileID: 707771636}
   - component: {fileID: 707771635}
   - component: {fileID: 707771634}
+  - component: {fileID: 707771637}
   m_Layer: 0
   m_Name: Mozart
   m_TagString: Untagged
@@ -617,6 +644,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707771632}
+--- !u!114 &707771637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707771632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 1
 --- !u!1 &955679109
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +667,7 @@ GameObject:
   - component: {fileID: 955679113}
   - component: {fileID: 955679112}
   - component: {fileID: 955679111}
+  - component: {fileID: 955679114}
   m_Layer: 0
   m_Name: Button (3)
   m_TagString: Untagged
@@ -727,6 +767,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 955679109}
+--- !u!114 &955679114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955679109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 0
 --- !u!1 &1339435241
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +884,7 @@ GameObject:
   - component: {fileID: 1837950069}
   - component: {fileID: 1837950068}
   - component: {fileID: 1837950067}
+  - component: {fileID: 1837950070}
   m_Layer: 0
   m_Name: Button (4)
   m_TagString: Untagged
@@ -931,6 +984,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837950065}
+--- !u!114 &1837950070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837950065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 0
 --- !u!1 &1890363726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1088,7 @@ GameObject:
   - component: {fileID: 1976508948}
   - component: {fileID: 1976508947}
   - component: {fileID: 1976508946}
+  - component: {fileID: 1976508949}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1122,6 +1188,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1976508944}
+--- !u!114 &1976508949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976508944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelectable: 0
+--- !u!1 &2071125001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2071125002}
+  - component: {fileID: 2071125003}
+  m_Layer: 0
+  m_Name: SceneTransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2071125002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071125001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 210.9375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071125003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071125001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21343f305c770c04c8573390575e1744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene:
+    m_SceneAsset: {fileID: 102900000, guid: 5d1917731d19f3140836770711687187, type: 3}
+    m_SceneName: Test Robin
 --- !u!1 &2086398572
 GameObject:
   m_ObjectHideFlags: 0

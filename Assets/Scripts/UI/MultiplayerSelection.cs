@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class MultiplayerSelection : MonoBehaviour
 {
-    public delegate void OnBothPlayerReady();
-    private OnBothPlayerReady onBothPlayerReadyCallbackFunc;
-
     private enum EPlayerControllerState
     {
         RESET,
@@ -133,7 +130,7 @@ public class MultiplayerSelection : MonoBehaviour
                 }
             case EPlayerControllerState.SET:
                 {
-                    Player2AxisSet(player1Input);
+                    Player2AxisSet(player2Input);
                     player2State = EPlayerControllerState.WAIT;
                     break;
                 }
@@ -212,19 +209,25 @@ public class MultiplayerSelection : MonoBehaviour
         if (player1ButtonPressed)
         {
             isPlayer1Selected = !isPlayer1Selected;
-            characters[player1Highlighted].image.color = (isPlayer1Selected) ? player1SelectColor : player1HighlightColor;
+            if (characters[player1Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
+            {
+                characters[player1Highlighted].image.color = (isPlayer1Selected) ? player1SelectColor : player1HighlightColor;
+            }
         }
 
         if (player2ButtonPressed)
         {
             isPlayer2Selected = !isPlayer2Selected;
-            characters[player2Highlighted].image.color = (isPlayer2Selected) ? player2SelectColor : player2HighlightColor;
+            if (characters[player1Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
+            {
+                characters[player2Highlighted].image.color = (isPlayer2Selected) ? player2SelectColor : player2HighlightColor;
+            }
         }
 
         // Return a callback function when both player have selected
         if (isPlayer1Selected && isPlayer2Selected)
         {
-            onBothPlayerReadyCallbackFunc();
+            SceneTransitionManager.instance.Proceed();
         }
     }
 
