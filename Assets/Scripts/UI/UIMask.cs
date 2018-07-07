@@ -18,7 +18,7 @@ public class UIMask : MonoBehaviour
         if (!uiMask.activeSelf)
         {
             uiMask.SetActive(true);
-            uiMask.GetComponent<RectTransform>().position = new Vector3(winner.transform.position.x, 
+            uiMask.transform.position = new Vector3(winner.transform.position.x, 
                 uiMask.transform.position.y, 
                 uiMask.transform.position.z);
         }
