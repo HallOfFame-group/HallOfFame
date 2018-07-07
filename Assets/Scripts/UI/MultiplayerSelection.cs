@@ -218,7 +218,7 @@ public class MultiplayerSelection : MonoBehaviour
         if (player2ButtonPressed)
         {
             isPlayer2Selected = !isPlayer2Selected;
-            if (characters[player1Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
+            if (characters[player2Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
             {
                 characters[player2Highlighted].image.color = (isPlayer2Selected) ? player2SelectColor : player2HighlightColor;
             }
