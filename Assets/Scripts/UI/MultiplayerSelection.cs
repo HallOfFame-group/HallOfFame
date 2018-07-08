@@ -27,7 +27,7 @@ public class MultiplayerSelection : MonoBehaviour
 
     private enum EPlayerControllerState
     {
-        RESET,
+        RESET = 0,
         MOVING,
         SET,
         WAIT
@@ -168,7 +168,7 @@ public class MultiplayerSelection : MonoBehaviour
             characters[playerHighlighted[playerIndex]].image.color = unselectedColor;
 
             // Highlight next
-            playerHighlighted[playerIndex] = GetNextSelected(playerHighlighted[playerIndex], nextSelected);
+            playerHighlighted[playerIndex] = nextSelected;
             characters[playerHighlighted[playerIndex]].image.color = playerHighlightColor[playerIndex];
 
             EvtOnPlayerHighlightCharacter();
@@ -177,12 +177,18 @@ public class MultiplayerSelection : MonoBehaviour
 
     private void SelectCharacter(bool playerPressed, int playerIndex)
     {
+        if (!playerPressed)
+        {
+            return;
+        }
+
         if (characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().IsSelectable)
         {
             isPlayerSelected[playerIndex] = !isPlayerSelected[playerIndex];
             characters[playerHighlighted[playerIndex]].image.color = (isPlayerSelected[playerIndex]) ? playerSelectColor[playerIndex] : playerHighlightColor[playerIndex];
         }
 
+        // Verify all players are ready to proceed to fight
         bool checkAllPlayerReady = true;
         foreach(bool b in isPlayerSelected)
         {
@@ -195,9 +201,9 @@ public class MultiplayerSelection : MonoBehaviour
         }
     }
 
-    private int GetNextSelected(int playerCurentSelected, int playerInput)
+    private int GetNextSelected(int playerCurrentSelected, int playerInput)
     {
-        int nextSelection = playerCurentSelected + playerInput;
+        int nextSelection = playerCurrentSelected + playerInput;
         return (nextSelection % characters.Length + characters.Length) % characters.Length;
     }
 

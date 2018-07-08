@@ -11,7 +11,6 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
     private int playerIndex = 1;
 
     private Animator anim;
-    private int previousSelected = 0;
 
     private void Start()
     {
@@ -29,13 +28,6 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
     IEnumerator DisplayDelay()
     {
         yield return new WaitForSeconds(delayTime);
-
-        int index = MultiplayerSelection.instance.GetCurrentSelectedIndex(playerIndex);
-
-        if (index != previousSelected)
-        {
-            anim.runtimeAnimatorController = MultiplayerSelection.instance.GetCurrentHighlightedAnimation(playerIndex);
-            previousSelected = index;
-        }
+        anim.runtimeAnimatorController = MultiplayerSelection.instance.GetCurrentHighlightedAnimation(playerIndex);
     }
 }
