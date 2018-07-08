@@ -11,10 +11,12 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
     private int playerIndex = 1;
 
     private Animator anim;
-    private int previousSelected = 0;
+
+    float originalYRotation;
 
     private void Start()
     {
+        originalYRotation = transform.rotation.y;
         anim = GetComponent<Animator>();
         MultiplayerSelection.instance.EvtOnPlayerHighlightCharacter += OnPlayerHighlightCharacter;
 
@@ -23,19 +25,27 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
 
     private void OnPlayerHighlightCharacter()
     {
+        StopCoroutine(DisplayDelay());
         StartCoroutine(DisplayDelay());
     }
 
     IEnumerator DisplayDelay()
     {
         yield return new WaitForSeconds(delayTime);
-
-        int index = MultiplayerSelection.instance.GetCurrentSelectedIndex(playerIndex);
-
-        if (index != previousSelected)
+        anim.runtimeAnimatorController = MultiplayerSelection.instance.GetCurrentHighlightedAnimation(playerIndex);
+        if (MultiplayerSelection.instance.GetCurrentSelectedFlippingHack(playerIndex))
         {
-            anim.runtimeAnimatorController = MultiplayerSelection.instance.GetCurrentHighlightedAnimation(playerIndex);
-            previousSelected = index;
+            if (transform.rotation.y == originalYRotation)
+            {
+                transform.Rotate(Vector3.up, 180);
+            }
+        }
+        else
+        {
+            if (transform.rotation.y != originalYRotation)
+            {
+                transform.Rotate(Vector3.up, 180);
+            }
         }
     }
 }

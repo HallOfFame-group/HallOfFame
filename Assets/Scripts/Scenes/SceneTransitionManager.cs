@@ -20,6 +20,8 @@ public class SceneTransitionManager : MonoBehaviour
     private SceneField nextScene;
     private bool proceedNextScene;
 
+    public ESelectedCharacter[] selectedCharacter;
+
     AsyncOperation loadSceneAsyncOp;
 
     private static SceneTransitionManager sceneTransitionManager;
@@ -33,6 +35,10 @@ public class SceneTransitionManager : MonoBehaviour
                 if (!sceneTransitionManager)
                 {
                     Debug.LogError("Scene Transition Manager must be attached to a script in scene");
+                }
+                else
+                {
+                    sceneTransitionManager.Init();
                 }
             }
             return sceneTransitionManager;
@@ -74,5 +80,12 @@ public class SceneTransitionManager : MonoBehaviour
     public void Proceed()
     {
         loadSceneAsyncOp.allowSceneActivation = true;
+        selectedCharacter = new ESelectedCharacter[MultiplayerSelection.instance.GetTotalNumberOfPlayers()];
+        for (int i = 0; i < selectedCharacter.Length; ++i)
+        {
+            // Need to explicitly + 1 because MultiplayerSelection auto decrements the input
+            // Need to keep this way because the way specified in inspector
+            selectedCharacter[i] = (ESelectedCharacter)(MultiplayerSelection.instance.GetCurrentSelectedIndex(i + 1));
+        }
     }
 }
