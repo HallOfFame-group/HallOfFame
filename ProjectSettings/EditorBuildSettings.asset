@@ -5,8 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 0
     path: Assets/Scenes/Timer.unity
+=======
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+>>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
     guid: c0621a0cf9d8d56469c750f630dc1d58
   - enabled: 0
     path: Assets/Scenes/RhythmCombo.unity
@@ -18,5 +23,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Robin.unity
     guid: 5d1917731d19f3140836770711687187
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Test_NL.unity
+=======
+    path: Assets/Scenes/UIMashTest_NL.unity
+>>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
     guid: 686ca1f5182049744b1f1b99036ed58e
