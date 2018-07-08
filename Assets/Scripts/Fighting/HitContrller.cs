@@ -6,64 +6,102 @@ using UnityEngine.UI;
 [RequireComponent(typeof(PlayerController))]
 public class HitContrller : MonoBehaviour {
 
-    private float hitTimer;
+    enum AttackType { Light, Heavy, Float }
+
+    [System.Serializable]
+    private struct AttackPref
+    {
+        [SerializeField]
+        public string AttackName;
+
+        [SerializeField]
+        public AttackType attackType;
+        
+    };
+
+    [SerializeField]
+    private AttackPref[] attackList;
+
     //private int hitFramer;
     private PlayerController playerController;
     private Animator animator;
+    private BoxCollider2D hitbox;
+    private BoxCollider2D attackbox;
 
+
+    public bool attackTriggered = false;
     public int hits = 0;
-
-    public Text test;
-
-    private string[] Attack_Name = { "Punch1", "Punch2", "Punch3", "Kick1", "Kick2", "Head Smash", "Duck Punch", "Duck Kick", "Jump Punch", "Jump Punch", "Jump Kick" };
-    private float[] Attack_HitTime = { 0.3f, 0.1f, 0.1f, 1f, 1f,1f,1f,1f,1f,1f,1f};
+    public Text text;
 
 
     private void Awake()
     {
-        hitTimer = 0.0f;
-        //hitFramer = 0;
         playerController = GetComponent<PlayerController>();
         animator = GetComponentInChildren<Animator>();
+        hitbox = transform.Find("Animator").Find("HitBox").GetComponent<BoxCollider2D>();
+        attackbox = transform.Find("Animator").Find("AttackBox").GetComponent<BoxCollider2D>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if(collision.transform.root.CompareTag("Player"))
+        if(otherCollider.transform.root.CompareTag("Player"))
         {
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-
-            HitContrller opponentHitController = collision.transform.root.GetComponent<HitContrller>();
-            Animator opponentAnimator = collision.transform.root.GetComponentInChildren<Animator>();
-            AnimatorStateInfo opponentStateInfo = opponentAnimator.GetCurrentAnimatorStateInfo(0);
-            //TODO: still has some issue with opponentStateInfo block
-
-            Debug.Log(gameObject.name + " : " + collision.name);
-
-            if (collision.name.Contains("Position") && !opponentStateInfo.IsName("Block"))
+            if (!attackTriggered)
             {
-                for (int i = 0; i < Attack_Name.Length; i++)
+                if ((otherCollider.name == "HitBox"|| otherCollider.name == "AttackBox")&& otherCollider.IsTouching(attackbox))
                 {
-                    if (stateInfo.IsName(Attack_Name[i]))
-                    {
-                        opponentHitController.hits++;
-                        opponentHitController.hitTimer = Attack_HitTime[i];
-                        opponentAnimator.SetTrigger("Hit Up");
+                    attackTriggered = true;
 
-                        if (opponentHitController.hits > 7)
+                    AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+                    HitContrller opponentHitController = otherCollider.transform.root.GetComponent<HitContrller>();
+                    Animator opponentAnimator = otherCollider.transform.root.GetComponentInChildren<Animator>();
+                    AnimatorStateInfo opponentStateInfo = opponentAnimator.GetCurrentAnimatorStateInfo(0);
+                    
+
+                    if (!opponentStateInfo.IsName("Block"))
+                    {
+                        for (int i = 0; i < attackList.Length; i++)
                         {
-                            RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-                            RhythmCombo.instance.Display(playerController.PlayerNumber);
-                            RhythmCombo.instance.nodeEventCallback = OnNodeHit;
-                            RhythmCombo.instance.finishedEventCallback = finished;
+                            if (stateInfo.IsName(attackList[i].AttackName))
+                            {
+                                opponentHitController.hits++;
+                                switch(attackList[i].attackType)
+                                {
+                                    case AttackType.Light:
+                                        opponentAnimator.SetTrigger("Hit Up");
+                                        break;
+
+                                    case AttackType.Heavy:
+                                        opponentAnimator.SetTrigger("Hit Down");
+                                        break;
+
+                                    case AttackType.Float:
+                                        opponentAnimator.SetTrigger("Death");
+                                        break;
+                                }
+
+                                if (opponentHitController.hits > 7)
+                                {
+
+                                }
+
+                                break;
+                            }
                         }
                     }
+                    else
+                    {
+
+                    }
+
+                    otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
+
                 }
             }
-
         }
     }
-
+    
     private void Update()
     {
 
@@ -82,41 +120,7 @@ public class HitContrller : MonoBehaviour {
         //    hits = 0;
         //    test.text = "";
         //}
-        //animator.SetFloat("HitTime",hitTimer);
 
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log(collision.collider.name);
-    //}
-
-
-    void OnNodeHit(NodePressResult result)
-    {
-        switch (result)
-        {
-            case NodePressResult.PERFECT:
-            case NodePressResult.GOOD:
-                CrowdBar.instance.IncreaseToPlayer1(2);
-                break;
-            case NodePressResult.BAD:
-            case NodePressResult.MISS:
-            default:
-                CrowdBar.instance.IncreaseToPlayer2(2);
-                break;
-        }
-
-    }
-
-
-    void finished()
-    {
-        Debug.Log("Finished");
-        Debug.Log(RhythmCombo.instance.comboResult.perfectCount);
-        Debug.Log(RhythmCombo.instance.comboResult.goodCount);
-        Debug.Log(RhythmCombo.instance.comboResult.badCount);
-        Debug.Log(RhythmCombo.instance.comboResult.missCount);
-        CrowdBar.instance.IncreaseToPlayer1(30);
-    }
 }
