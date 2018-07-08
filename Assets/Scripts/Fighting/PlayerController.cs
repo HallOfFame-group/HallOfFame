@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Kick") || Input.GetButtonDown("Keyboard_Kick"))
             animator.SetTrigger("Kick");
 
+        if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Throw") || Input.GetButtonDown("Keyboard_Throw"))
+            animator.SetTrigger("Throw");
+
 
     }
 
@@ -105,7 +108,6 @@ public class PlayerController : MonoBehaviour {
 
 
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
