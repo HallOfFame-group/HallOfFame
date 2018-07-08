@@ -83,7 +83,10 @@ public class HitContrller : MonoBehaviour {
 
                                 if (opponentHitController.hits > 7)
                                 {
-
+                                    RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
+                                    RhythmCombo.instance.Display(1);
+                                    RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+                                    RhythmCombo.instance.finishedEventCallback = finished;
                                 }
 
                                 break;
@@ -95,13 +98,40 @@ public class HitContrller : MonoBehaviour {
 
                     }
 
-                    otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
+                    //otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
 
                 }
             }
         }
     }
-    
+
+    void OnNodeHit(NodePressResult result)
+    {
+        switch (result)
+        {
+            case NodePressResult.PERFECT:
+            case NodePressResult.GOOD:
+                CrowdBar.instance.IncreaseToPlayer1(30);
+                break;
+            case NodePressResult.BAD:
+            case NodePressResult.MISS:
+            default:
+                CrowdBar.instance.IncreaseToPlayer2(30);
+                break;
+        }
+
+    }
+
+
+    void finished()
+    {
+        Debug.Log("Finished");
+        Debug.Log(RhythmCombo.instance.comboResult.perfectCount);
+        Debug.Log(RhythmCombo.instance.comboResult.goodCount);
+        Debug.Log(RhythmCombo.instance.comboResult.badCount);
+        Debug.Log(RhythmCombo.instance.comboResult.missCount);
+        CrowdBar.instance.IncreaseToPlayer1(30);
+    }
     private void Update()
     {
 
