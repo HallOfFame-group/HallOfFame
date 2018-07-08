@@ -65,22 +65,22 @@ public class HitContrller : MonoBehaviour {
     private void Update()
     {
 
-        if (hits > 1)
-        {
-            test.text = "" + hits;
-        }
+        //if (hits > 1)
+        //{
+        //    test.text = "" + hits;
+        //}
 
-        if (hitTimer>0)
-        {
-            hitTimer -= Time.deltaTime;
-        }
-        else
-        {
-            hitTimer = 0.0f;
-            hits = 0;
-            test.text = "";
-        }
-        animator.SetFloat("HitTime",hitTimer);
+        //if (hitTimer>0)
+        //{
+        //    hitTimer -= Time.deltaTime;
+        //}
+        //else
+        //{
+        //    hitTimer = 0.0f;
+        //    hits = 0;
+        //    test.text = "";
+        //}
+        //animator.SetFloat("HitTime",hitTimer);
 
     }
 
