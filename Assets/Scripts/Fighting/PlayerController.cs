@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float jumpHight = 75;
     public int PlayerNumber = 0;
 
-
-
-
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D positionBox;
@@ -21,6 +18,9 @@ public class PlayerController : MonoBehaviour {
     public bool IsCrouching { get; set; }
     public bool IsBlocking { get; set; }
 
+    public enum WeaponType { piano, violin};
+    public WeaponType selectedWeapon = WeaponType.piano;
+    public GameObject weapon;
     //public CameraShake cameraShake;
     //public SlowMotionEffect slowMotionEffect;
 
@@ -55,7 +55,22 @@ public class PlayerController : MonoBehaviour {
             animator.SetTrigger("Kick");
 
         if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Throw") || Input.GetButtonDown("Keyboard_Throw"))
+        {
             animator.SetTrigger("Throw");
+            GameObject temp;
+            switch (selectedWeapon)
+            {
+                case WeaponType.piano:         
+                    temp = Instantiate(weapon, new Vector2(target.transform.position.x, target.transform.position.y + 25), Quaternion.identity) as GameObject;
+                    temp.GetComponent<Projectiles>().target = target.gameObject;
+                    break;
+                case WeaponType.violin:
+                    temp = Instantiate(weapon, new Vector2(transform.position.x + 2.5f * (target.transform.position - transform.position).normalized.x, transform.position.y + 7.5f), Quaternion.identity) as GameObject;
+                    temp.GetComponent<Rigidbody2D>().AddForce((target.transform.position - transform.position).normalized * 2000, 0);
+                    temp.GetComponent<Projectiles>().target = target.gameObject;
+                    break;
+            }
+        }
 
 
     }
