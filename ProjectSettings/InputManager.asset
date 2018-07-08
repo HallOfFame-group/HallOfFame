@@ -102,7 +102,7 @@ InputManager:
     axis: 1
     joyNum: 2
   - serializedVersion: 3
-    m_Name: 360Controller0_Throw
+    m_Name: 360Controller0_Button_A
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -118,7 +118,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: 360Controller1_Throw
+    m_Name: 360Controller1_Button_A
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -134,7 +134,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: 360Controller2_Throw
+    m_Name: 360Controller2_Button_A
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
