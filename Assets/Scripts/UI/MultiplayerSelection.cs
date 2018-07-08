@@ -39,20 +39,15 @@ public class MultiplayerSelection : MonoBehaviour
     private Color unselectedColor;
 
     [SerializeField]
-    private Color player1Color;
-    [SerializeField]
-    private Color player2Color;
+    private Color [] playerColor;
 
-    private Color player1HighlightColor;
-    private Color player2HighlightColor;
-    private Color player1SelectColor;
-    private Color player2SelectColor;
+    private Color [] playerHighlightColor;
+    private Color [] playerSelectColor;
 
-    private EPlayerControllerState player1State = EPlayerControllerState.RESET;
-    private EPlayerControllerState player2State = EPlayerControllerState.RESET;
+    private EPlayerControllerState[] playerControllerState;
 
-    private int player1Highlighted = 0;
-    private int player2Highlighted = 0;
+    private int[] playerHighlighted;
+    private bool[] isPlayerSelected;
     
     private bool isPlayer1Selected = false;
     private bool isPlayer2Selected = false;
@@ -65,166 +60,138 @@ public class MultiplayerSelection : MonoBehaviour
             Destroy(this);
         }
 
+        characters = GetComponentsInChildren<Button>();
+
+        // Set player highligh color and select color array based on number of player colors given
+        playerHighlightColor = new Color[playerColor.Length];
+        playerSelectColor = new Color[playerColor.Length];
+
         // Derive highlight and select color
-        player1HighlightColor = player1Color;
-        player1HighlightColor.a = 0.5f;
-        player1SelectColor = player1Color;
-        player1SelectColor.a = 0.9f;
+        for(int i = 0; i < playerColor.Length; ++i)
+        {
+            playerHighlightColor[i] = playerColor[i];
+            playerHighlightColor[i].a = 0.5f;
 
-        player2HighlightColor = player2Color;
-        player2HighlightColor.a = 0.5f;
-        player2SelectColor = player2Color;
-        player2SelectColor.a = 0.9f;
+            playerSelectColor[i] = playerColor[i];
+            playerSelectColor[i].a = 0.9f;
+        }
 
-        // Find selectable buttons
-        characters = transform.GetComponentsInChildren<Button>();
-        player2Highlighted = characters.Length - 1;
+        // Set player controller state based on number of player colors given
+        playerControllerState = new EPlayerControllerState[playerColor.Length];
+
+        playerHighlighted = new int[playerColor.Length];
+
+        isPlayerSelected = new bool[playerColor.Length];
 
         // Highlight defaults
-        characters[player1Highlighted].image.color = player1HighlightColor;
-        characters[player2Highlighted].image.color = player2HighlightColor;
+        for(int i = 0; i < playerColor.Length; ++i)
+        {
+            playerHighlighted[i] = i;
+            characters[playerHighlighted[i]].image.color = playerHighlightColor[i];
+        }
     }
 
     private void Update()
     {
         #region Force player to debounce the input axis
-        // LS X-axis input value from players
-        int player1Input = (int)Input.GetAxis("360Controller1_LS_XAxis");
-        int player2Input = (int)Input.GetAxis("360Controller2_LS_XAxis");
 
-        // Boolean to check if the LS X-axis is moved
-        bool player1InputReset = Input.GetAxis("360Controller1_LS_XAxis") == 0;
-        bool player2InputReset = Input.GetAxis("360Controller2_LS_XAxis") == 0;
-
-        /*
-         * RESET -> MOVING: When player LS X axis is touched
-         * MOVING -> SET: When player LS X axis is at 1 or -1
-         * SET -> WAIT: n/a
-         * WAIT -> RESET: When player LS X axis is not at 1 or -1
-         */
-        switch (player1State)
+        for(int i = 0; i < playerColor.Length; ++i)
         {
-            case EPlayerControllerState.RESET:
-                {
-                    if (!player1InputReset)
+            int playerInput = (int)Input.GetAxis("360Controller" + (i + 1) + "_LS_XAxis");
+            bool playerReset = Input.GetAxis("360Controller" + (i + 1) + "_LS_XAxis") == 0;
+            /*
+             * RESET -> MOVING: When player LS X axis is touched
+             * MOVING -> SET: When player LS X axis is at 1 or -1
+             * SET -> WAIT: n/a
+             * WAIT -> RESET: When player LS X axis is not at 1 or -1
+             */
+            switch (playerControllerState[i])
+            {
+                case EPlayerControllerState.RESET:
                     {
-                        player1State = EPlayerControllerState.MOVING;
+                        if (!playerReset)
+                        {
+                            playerControllerState[i] = EPlayerControllerState.MOVING;
+                        }
+                        break;
                     }
-                    break;
-                }
-            case EPlayerControllerState.MOVING:
-                {
-                    if (player1Input != 0)
+                case EPlayerControllerState.MOVING:
                     {
-                        player1State = EPlayerControllerState.SET;
+                        if (playerInput != 0)
+                        {
+                            playerControllerState[i] = EPlayerControllerState.SET;
+                        }
+                        break;
                     }
-                    break;
-                }
-            case EPlayerControllerState.SET:
-                {
-                    Player1AxisSet(player1Input);
-                    player1State = EPlayerControllerState.WAIT;
-                    break;
-                }
-            case EPlayerControllerState.WAIT:
-                {
-                    if (player1Input == 0)
+                case EPlayerControllerState.SET:
                     {
-                        player1State = EPlayerControllerState.RESET;
+                        SetPlayerHighlight(playerInput, i);
+                        playerControllerState[i] = EPlayerControllerState.WAIT;
+                        break;
                     }
-                    break;
-                }
+                case EPlayerControllerState.WAIT:
+                    {
+                        if (playerInput == 0)
+                        {
+                            playerControllerState[i] = EPlayerControllerState.RESET;
+                        }
+                        break;
+                    }
+            }
+
+
+            bool isPlayerSelecting = Input.GetButtonDown("360Controller" + (i + 1) + "_Button_A");
+            bool isPlayerCancelling = Input.GetButtonDown("360Controller" + (i + 1) + "_Block");
+
+            CancelSelection(isPlayerCancelling, i);
+            SelectCharacter(isPlayerSelecting, i);
         }
-
-        switch (player2State)
-        {
-            case EPlayerControllerState.RESET:
-                {
-                    if (!player2InputReset)
-                    {
-                        player2State = EPlayerControllerState.MOVING;
-                    }
-                    break;
-                }
-            case EPlayerControllerState.MOVING:
-                {
-                    if (player2Input != 0)
-                    {
-                        player2State = EPlayerControllerState.SET;
-                    }
-                    break;
-                }
-            case EPlayerControllerState.SET:
-                {
-                    Player2AxisSet(player2Input);
-                    player2State = EPlayerControllerState.WAIT;
-                    break;
-                }
-            case EPlayerControllerState.WAIT:
-                {
-                    if (player2Input == 0)
-                    {
-                        player2State = EPlayerControllerState.RESET;
-                    }
-                    break;
-                }
-        }
-        #endregion
-
-        #region Handle player selecting the player
-        bool isPlayer1Selecting = Input.GetButtonDown("360Controller1_Button_A");
-        bool isPlayer2Selecting = Input.GetButtonDown("360Controller2_Button_A");
-        bool isPlayer1Cancelling = Input.GetButtonDown("360Controller1_Block");
-        bool isPlayer2Cancelling = Input.GetButtonDown("360Controller2_Block");
-
-        CancelSelection(isPlayer1Cancelling, isPlayer2Cancelling);
-        SelectCharacter(isPlayer1Selecting, isPlayer2Selecting);
         #endregion
     }
 
-    private void Player1AxisSet(int axisDirection)
+    private void SetPlayerHighlight(int axisDirection, int playerIndex)
     {
-        // Check player 1 inputs
-        if (axisDirection != 0 && !isPlayer1Selected)
+        if (axisDirection != 0 && !isPlayerSelected[playerIndex])
         {
-            // Skip ahead if selecting same character
-            int player1NextSelected = GetNextSelected(player1Highlighted, axisDirection);
-            if (player1NextSelected == player2Highlighted)
+            int nextSelected = GetNextSelected(playerHighlighted[playerIndex], axisDirection);
+
+            // Loop to find any player highlighting the target already
+            for(int i = 0; i < playerColor.Length; ++i)
             {
-                axisDirection *= 2;
+                if (playerHighlighted[i] == nextSelected)
+                {
+                    nextSelected += axisDirection;
+                }
             }
 
             // Unhighlight current selected
-            characters[player1Highlighted].image.color = unselectedColor;
+            characters[playerHighlighted[playerIndex]].image.color = unselectedColor;
 
-            // Highlight next object
-            player1Highlighted = GetNextSelected(player1Highlighted, axisDirection);
-            characters[player1Highlighted].image.color = player1HighlightColor;
+            // Highlight next
+            playerHighlighted[playerIndex] = GetNextSelected(playerHighlighted[playerIndex], nextSelected);
+            characters[playerHighlighted[playerIndex]].image.color = playerHighlightColor[playerIndex];
 
             EvtOnPlayerHighlightCharacter();
         }
     }
 
-    private void Player2AxisSet(int axisDirection)
+    private void SelectCharacter(bool playerPressed, int playerIndex)
     {
-        // Check player 2 inputs
-        if (axisDirection != 0 && !isPlayer2Selected)
+        if (characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().IsSelectable)
         {
-            // Skip ahead if selecting same character
-            int player2NextSelected = GetNextSelected(player2Highlighted, axisDirection);
-            if (player2NextSelected == player1Highlighted)
-            {
-                axisDirection *= 2;
-            }
+            isPlayerSelected[playerIndex] = !isPlayerSelected[playerIndex];
+            characters[playerHighlighted[playerIndex]].image.color = (isPlayerSelected[playerIndex]) ? playerSelectColor[playerIndex] : playerHighlightColor[playerIndex];
+        }
 
-            // Unhighlight current selected
-            characters[player2Highlighted].image.color = unselectedColor;
+        bool checkAllPlayerReady = true;
+        foreach(bool b in isPlayerSelected)
+        {
+            checkAllPlayerReady = checkAllPlayerReady && b;
+        }
 
-            // Highlight next object
-            player2Highlighted = GetNextSelected(player2Highlighted, axisDirection);
-            characters[player2Highlighted].image.color = player2HighlightColor;
-
-            EvtOnPlayerHighlightCharacter();
+        if (checkAllPlayerReady)
+        {
+            SceneTransitionManager.instance.Proceed();
         }
     }
 
@@ -234,56 +201,17 @@ public class MultiplayerSelection : MonoBehaviour
         return (nextSelection % characters.Length + characters.Length) % characters.Length;
     }
 
-    private void SelectCharacter(bool player1ButtonPressed, bool player2ButtonPressed)
+    private void CancelSelection(bool isPlayerCancelling, int playerIndex)
     {
-        if (player1ButtonPressed)
-        {
-            if (characters[player1Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
-            {
-                isPlayer1Selected = !isPlayer1Selected;
-                characters[player1Highlighted].image.color = (isPlayer1Selected) ? player1SelectColor : player1HighlightColor;
-            }
-        }
+        isPlayerCancelling = isPlayerSelected[playerIndex] && isPlayerCancelling;
 
-        if (player2ButtonPressed)
-        {
-            if (characters[player2Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
-            {
-                isPlayer2Selected = !isPlayer2Selected;
-                characters[player2Highlighted].image.color = (isPlayer2Selected) ? player2SelectColor : player2HighlightColor;
-            }
-        }
-
-        // Return a callback function when both player have selected
-        if (isPlayer1Selected && isPlayer2Selected)
-        {
-            SceneTransitionManager.instance.Proceed();
-        }
-    }
-
-    private void CancelSelection(bool isPlayer1Cancelling, bool isPlayer2Cancelling)
-    {
-        isPlayer1Cancelling = isPlayer1Selected && isPlayer1Cancelling;
-        isPlayer2Cancelling = isPlayer2Selected && isPlayer2Cancelling;
-
-        SelectCharacter(isPlayer1Cancelling, isPlayer2Cancelling);
+        SelectCharacter(isPlayerCancelling, playerIndex);
     }
 
     public Sprite GetCurrentHighlightedDisplayName(int playerIndex)
     {
-        Sprite nameImg;
-        switch (playerIndex)
-        {
-            case 1:
-                nameImg = characters[player1Highlighted].GetComponent<CharacterSelectable>().characterName;
-                break;
-            case 2:
-                nameImg = characters[player2Highlighted].GetComponent<CharacterSelectable>().characterName;
-                break;
-            default:
-                nameImg = null;
-                break;
-        }
+        playerIndex--;
+        Sprite nameImg = characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().characterName;
 
         if (nameImg)
         {
@@ -295,35 +223,14 @@ public class MultiplayerSelection : MonoBehaviour
 
     public RuntimeAnimatorController GetCurrentHighlightedAnimation(int playerIndex)
     {
-        RuntimeAnimatorController anim = null;
-        switch (playerIndex)
-        {
-            case 1:
-                anim = characters[player1Highlighted].GetComponent<CharacterSelectable>().characterDisplayAnim;
-                break;
-            case 2:
-                anim = characters[player2Highlighted].GetComponent<CharacterSelectable>().characterDisplayAnim;
-                break;
-            default:
-                break;
-        }
+        playerIndex--;
+        RuntimeAnimatorController anim = characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().characterDisplayAnim;
         return anim;
     }
 
     public int GetCurrentSelectedIndex(int playerIndex)
     {
-        int currentIndex = 0;
-        switch (playerIndex)
-        {
-            case 1:
-                currentIndex = player1Highlighted;
-                break;
-            case 2:
-                currentIndex = player2Highlighted;
-                break;
-            default:
-                break;
-        }
-        return currentIndex;
+        playerIndex--;
+        return playerHighlighted[playerIndex];
     }
 }
