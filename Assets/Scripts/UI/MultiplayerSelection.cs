@@ -292,4 +292,38 @@ public class MultiplayerSelection : MonoBehaviour
 
         return null;
     }
+
+    public RuntimeAnimatorController GetCurrentHighlightedAnimation(int playerIndex)
+    {
+        RuntimeAnimatorController anim = null;
+        switch (playerIndex)
+        {
+            case 1:
+                anim = characters[player1Highlighted].GetComponent<CharacterSelectable>().characterDisplayAnim;
+                break;
+            case 2:
+                anim = characters[player2Highlighted].GetComponent<CharacterSelectable>().characterDisplayAnim;
+                break;
+            default:
+                break;
+        }
+        return anim;
+    }
+
+    public int GetCurrentSelectedIndex(int playerIndex)
+    {
+        int currentIndex = 0;
+        switch (playerIndex)
+        {
+            case 1:
+                currentIndex = player1Highlighted;
+                break;
+            case 2:
+                currentIndex = player2Highlighted;
+                break;
+            default:
+                break;
+        }
+        return currentIndex;
+    }
 }

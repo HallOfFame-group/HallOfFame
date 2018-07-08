@@ -7,5 +7,5 @@ public class CharacterSelectable : MonoBehaviour
 {
     public bool IsSelectable = false;
     public Sprite characterName;
-    public Image characterImage;
+    public RuntimeAnimatorController characterDisplayAnim;
 }
