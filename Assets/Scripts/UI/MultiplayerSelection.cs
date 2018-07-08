@@ -241,4 +241,9 @@ public class MultiplayerSelection : MonoBehaviour
     {
         return characters[playerHighlighted[--playerIndex]].GetComponent<CharacterSelectable>().RequireFlipping;
     }
+
+    public int GetTotalNumberOfPlayers()
+    {
+        return playerColor.Length;
+    }
 }

@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,7 +39,6 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
-  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,10 +54,11 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -1225,6 +1225,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114676185668437196, guid: 809562098ec768746837aeb99988f804,
+        type: 2}
+      propertyPath: bannerMapping.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676185668437196, guid: 809562098ec768746837aeb99988f804,
+        type: 2}
+      propertyPath: bannerMapping.Array.data[0].entries.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4210191603387738, guid: 809562098ec768746837aeb99988f804, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1235,7 +1245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4210191603387738, guid: 809562098ec768746837aeb99988f804, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 4210191603387738, guid: 809562098ec768746837aeb99988f804, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1256,6 +1266,25 @@ Prefab:
     - target: {fileID: 4210191603387738, guid: 809562098ec768746837aeb99988f804, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681416520702662, guid: 809562098ec768746837aeb99988f804, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212911966602368726, guid: 809562098ec768746837aeb99988f804,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676185668437196, guid: 809562098ec768746837aeb99988f804,
+        type: 2}
+      propertyPath: bannerMapping.Array.data[0].entries.Array.data[0].SelectedCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676185668437196, guid: 809562098ec768746837aeb99988f804,
+        type: 2}
+      propertyPath: bannerMapping.Array.data[0].entries.Array.data[1].SelectedCharacter
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 809562098ec768746837aeb99988f804, type: 2}

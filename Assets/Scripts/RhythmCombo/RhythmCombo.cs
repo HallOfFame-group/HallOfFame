@@ -11,6 +11,19 @@ public struct RhythmResult
     public int missCount;
 };
 
+[System.Serializable]
+public struct RhythmComboBannerEntry
+{
+    public SceneTransitionManager.ESelectedCharacter CharacterName;
+    public Image CharacterBanner;
+}
+
+[System.Serializable]
+public struct RhythmComboBannerMapping
+{
+    public RhythmComboBannerEntry[] entries;
+}
+
 public class RhythmCombo : MonoBehaviour
 {
     #region Private Members
@@ -33,6 +46,9 @@ public class RhythmCombo : MonoBehaviour
     private ComboPiece currentPlayingPiece;
 
     private int playerNum = 0;
+
+    [SerializeField]
+    private RhythmComboBannerMapping[] bannerMapping;
     #endregion
 
     #region Public Members
@@ -66,6 +82,8 @@ public class RhythmCombo : MonoBehaviour
     public delegate void RHythmComboOnNodeHit(NodePressResult result);
     public RhythmComboCallback finishedEventCallback;
     public RHythmComboOnNodeHit nodeEventCallback;
+
+
 
     #endregion
 
@@ -144,8 +162,22 @@ public class RhythmCombo : MonoBehaviour
     /// </summary>
     public void Display(int playerNum)
     {
-        Activate(true);
+        --playerNum;
+        foreach(RhythmComboBannerEntry entry in bannerMapping[playerNum].entries)
+        {
+            SceneTransitionManager.ESelectedCharacter c =  SceneTransitionManager.instance.selectedCharacter[playerNum];
+            if (entry.CharacterName == c)
+            {
+                // Play corresponding animation mapped to this entry
+                break;
+            }
+        }
         this.playerNum = playerNum;
+    }
+
+    public void BannerAnimFinishedHandler()
+    {
+        Activate(true);
     }
 
     public void RolloutAnimFinshedHandler()
