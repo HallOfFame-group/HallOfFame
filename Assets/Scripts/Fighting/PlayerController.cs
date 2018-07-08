@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float jumpHight = 75;
     public int PlayerNumber = 0;
 
-
-
-
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D positionBox;
