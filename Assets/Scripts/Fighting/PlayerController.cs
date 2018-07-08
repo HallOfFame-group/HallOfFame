@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour {
     public bool IsCrouching { get; set; }
     public bool IsBlocking { get; set; }
 
+    //public CameraShake cameraShake;
+    //public SlowMotionEffect slowMotionEffect;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -41,7 +44,9 @@ public class PlayerController : MonoBehaviour {
 
 
         if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Punch") || Input.GetButtonDown("Keyboard_Punch"))
+        {
             animator.SetTrigger("Punch");
+        }
 
         if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Kick") || Input.GetButtonDown("Keyboard_Kick"))
             animator.SetTrigger("Kick");

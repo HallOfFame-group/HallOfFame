@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Timer.unity
     guid: c0621a0cf9d8d56469c750f630dc1d58
   - enabled: 0
     path: Assets/Scenes/RhythmCombo.unity
     guid: 60808622e3b0b9a4eab1bc432d010f02
   - enabled: 1
+    path: Assets/Scenes/CharacterSelection.unity
+    guid: 62b53c17e2def1a43b6df2db22870b66
+  - enabled: 1
     path: Assets/Scenes/Test Robin.unity
     guid: 5d1917731d19f3140836770711687187
+  - enabled: 1
+    path: Assets/Scenes/Test_NL.unity
+    guid: 686ca1f5182049744b1f1b99036ed58e
