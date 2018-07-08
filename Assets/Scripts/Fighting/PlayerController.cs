@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] Transform target;
     [SerializeField] float moveSpeed = 20;
     [SerializeField] float jumpHight = 75;
+    public int PlayerNumber = 0;
+
+
+
 
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D positionBox;
 
-    public int PlayerNumber = 0;
 
     public bool IsGrounded { get; set; }
     public bool IsCrouching { get; set; }
