@@ -29,7 +29,6 @@ public class HitContrller : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if(collision.transform.root.CompareTag("Player"))
         {
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
@@ -38,6 +37,9 @@ public class HitContrller : MonoBehaviour {
             Animator opponentAnimator = collision.transform.root.GetComponentInChildren<Animator>();
             AnimatorStateInfo opponentStateInfo = opponentAnimator.GetCurrentAnimatorStateInfo(0);
             //TODO: still has some issue with opponentStateInfo block
+
+            Debug.Log(gameObject.name + " : " + collision.name);
+
             if (collision.name.Contains("Position") && !opponentStateInfo.IsName("Block"))
             {
                 for (int i = 0; i < Attack_Name.Length; i++)
@@ -65,22 +67,22 @@ public class HitContrller : MonoBehaviour {
     private void Update()
     {
 
-        if (hits > 1)
-        {
-            test.text = "" + hits;
-        }
+        //if (hits > 1)
+        //{
+        //    test.text = "" + hits;
+        //}
 
-        if (hitTimer>0)
-        {
-            hitTimer -= Time.deltaTime;
-        }
-        else
-        {
-            hitTimer = 0.0f;
-            hits = 0;
-            test.text = "";
-        }
-        animator.SetFloat("HitTime",hitTimer);
+        //if (hitTimer>0)
+        //{
+        //    hitTimer -= Time.deltaTime;
+        //}
+        //else
+        //{
+        //    hitTimer = 0.0f;
+        //    hits = 0;
+        //    test.text = "";
+        //}
+        //animator.SetFloat("HitTime",hitTimer);
 
     }
 

@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    public enum ESelectedCharacter
+    {
+        Tchaikovsky,
+        Beethovan,
+        Berlioz,
+        Dvorak,
+        Chopin,
+        Mozart,
+        Vivaldi
+    }
+
     [SerializeField]
     private SceneField nextScene;
     private bool proceedNextScene;

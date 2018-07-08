@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] Transform target;
     [SerializeField] float moveSpeed = 20;
     [SerializeField] float jumpHight = 75;
+    public int PlayerNumber = 0;
+
+
+
 
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D positionBox;
 
-    public int PlayerNumber = 0;
 
     public bool IsGrounded { get; set; }
     public bool IsCrouching { get; set; }
@@ -50,6 +53,9 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Kick") || Input.GetButtonDown("Keyboard_Kick"))
             animator.SetTrigger("Kick");
+
+        if (Input.GetButtonDown("360Controller" + PlayerNumber + "_Throw") || Input.GetButtonDown("Keyboard_Throw"))
+            animator.SetTrigger("Throw");
 
 
     }
@@ -105,7 +111,6 @@ public class PlayerController : MonoBehaviour {
 
 
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

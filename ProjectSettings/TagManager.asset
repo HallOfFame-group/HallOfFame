@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - BoundingBox
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - PositionBox_Jump
   - PositionBox_Ground
-  - 
+  - HitBox
   - 
   - 
   - 
