@@ -431,7 +431,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 4dc055756f64e8f4895d94dec6e02545, type: 2}
+      objectReference: {fileID: 9100000, guid: 2b8410dd77ac4ac4ba8f58076c682e37, type: 2}
     - target: {fileID: 212915453678429456, guid: 939db3a8f967e6d4295900a7310af44c,
         type: 2}
       propertyPath: m_FlipX
@@ -440,6 +440,27 @@ Prefab:
     - target: {fileID: 1313614240637912, guid: 939db3a8f967e6d4295900a7310af44c, type: 2}
       propertyPath: m_Name
       value: Mozart
+      objectReference: {fileID: 0}
+    - target: {fileID: 212915453678429456, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a3ef2d08dfe4274eb82babf3fb3600a,
+        type: 3}
+    - target: {fileID: 212915453678429456, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 6.885714
+      objectReference: {fileID: 0}
+    - target: {fileID: 212915453678429456, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 11.285714
+      objectReference: {fileID: 0}
+    - target: {fileID: 212915453678429456, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 939db3a8f967e6d4295900a7310af44c, type: 2}

@@ -224,8 +224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unselectedColor: {r: 1, g: 1, b: 1, a: 0}
-  player1Color: {r: 1, g: 0, b: 0, a: 0}
-  player2Color: {r: 0.24137926, g: 0, b: 1, a: 1}
+  playerColor:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.15862082, g: 0, b: 1, a: 0}
 --- !u!1 &333981053
 GameObject:
   m_ObjectHideFlags: 0

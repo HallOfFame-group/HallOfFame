@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 550bb90f57bc99244a6bb1961301f3d0
+timeCreated: 1531077363
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: skeleton-DEath_0
+    21300002: skeleton-DEath_1
+    21300004: skeleton-DEath_2
+    21300006: skeleton-DEath_3
+    21300008: skeleton-DEath_4
+    21300010: skeleton-DEath_5
+    21300012: skeleton-DEath_6
+    21300014: skeleton-DEath_7
+    21300016: skeleton-DEath_8
+    21300018: skeleton-DEath_9
+    21300020: skeleton-DEath_10
+    21300022: skeleton-DEath_11
+    21300024: skeleton-DEath_12
+    21300026: skeleton-DEath_13
+    21300028: skeleton-DEath_14
+    21300030: skeleton-DEath_15
+    21300032: skeleton-DEath_16
+    21300034: skeleton-DEath_17
+    21300036: skeleton-DEath_18
+    21300038: skeleton-DEath_19
+    21300040: skeleton-DEath_20
+    21300042: skeleton-DEath_21
+    21300044: skeleton-DEath_22
+    21300046: skeleton-DEath_23
+    21300048: skeleton-DEath__16
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 70
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skeleton-DEath_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_1
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_2
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_3
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 0
+        width: 907
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_4
+      rect:
+        serializedVersion: 2
+        x: 3664
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_5
+      rect:
+        serializedVersion: 2
+        x: 4580
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_6
+      rect:
+        serializedVersion: 2
+        x: 5496
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_7
+      rect:
+        serializedVersion: 2
+        x: 6412
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_8
+      rect:
+        serializedVersion: 2
+        x: 7328
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_9
+      rect:
+        serializedVersion: 2
+        x: 8244
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_10
+      rect:
+        serializedVersion: 2
+        x: 9160
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_11
+      rect:
+        serializedVersion: 2
+        x: 10076
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_12
+      rect:
+        serializedVersion: 2
+        x: 10992
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_13
+      rect:
+        serializedVersion: 2
+        x: 11908
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_14
+      rect:
+        serializedVersion: 2
+        x: 12824
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_15
+      rect:
+        serializedVersion: 2
+        x: 13740
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_16
+      rect:
+        serializedVersion: 2
+        x: 14656
+        y: 0
+        width: 1
+        height: 837
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_17
+      rect:
+        serializedVersion: 2
+        x: 15572
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_18
+      rect:
+        serializedVersion: 2
+        x: 16488
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_19
+      rect:
+        serializedVersion: 2
+        x: 17404
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_20
+      rect:
+        serializedVersion: 2
+        x: 18320
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_21
+      rect:
+        serializedVersion: 2
+        x: 19236
+        y: 0
+        width: 916
+        height: 837
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_22
+      rect:
+        serializedVersion: 2
+        x: 20152
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath_23
+      rect:
+        serializedVersion: 2
+        x: 21068
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton-DEath__16
+      rect:
+        serializedVersion: 2
+        x: 14656
+        y: 0
+        width: 916
+        height: 837
+      alignment: 9
+      pivot: {x: 0.565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
