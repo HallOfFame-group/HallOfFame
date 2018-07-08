@@ -49,6 +49,7 @@ public class RhythmCombo : MonoBehaviour
 
     [SerializeField]
     private RhythmComboBannerMapping[] bannerMapping;
+    private GameObject playedBannerImage;
     #endregion
 
     #region Public Members
@@ -82,9 +83,6 @@ public class RhythmCombo : MonoBehaviour
     public delegate void RHythmComboOnNodeHit(NodePressResult result);
     public RhythmComboCallback finishedEventCallback;
     public RHythmComboOnNodeHit nodeEventCallback;
-
-
-
     #endregion
 
     #region Non-Public Methods
@@ -107,6 +105,13 @@ public class RhythmCombo : MonoBehaviour
 
     protected void Init()
     {
+        foreach(RhythmComboBannerMapping rcbm in bannerMapping)
+        {
+            foreach(RhythmComboBannerEntry entry in rcbm.entries)
+            {
+                entry.CharacterBanner.gameObject.GetComponent<BannerImageAnimationHandler>().EvtOnBannerImageAnmiationEnd += BannerAnimFinishedHandler;
+            }
+        }
     }
 
     // Set Rhythm combo active or not
@@ -163,7 +168,7 @@ public class RhythmCombo : MonoBehaviour
     public void Display(int playerNum)
     {
         --playerNum;
-        foreach(RhythmComboBannerEntry entry in bannerMapping[playerNum].entries)
+        foreach (RhythmComboBannerEntry entry in bannerMapping[playerNum].entries)
         {
             SceneTransitionManager.ESelectedCharacter c =  SceneTransitionManager.instance.selectedCharacter[playerNum];
             if (entry.CharacterName == c)
@@ -175,9 +180,26 @@ public class RhythmCombo : MonoBehaviour
         this.playerNum = playerNum;
     }
 
+    public void Display(int playerNum, SceneTransitionManager.ESelectedCharacter c)
+    {
+        --playerNum;
+        foreach (RhythmComboBannerEntry entry in bannerMapping[playerNum].entries)
+        {
+            if (entry.CharacterName == c)
+            {
+                // Play corresponding animation mapped to this entry
+                playedBannerImage = entry.CharacterBanner.gameObject;
+                playedBannerImage.SetActive(true);
+                break;
+            }
+        }
+        Activate(true);
+        this.playerNum = playerNum;
+    }
+
     public void BannerAnimFinishedHandler()
     {
-        Activate(true);
+        playedBannerImage.SetActive(false);
     }
 
     public void RolloutAnimFinshedHandler()

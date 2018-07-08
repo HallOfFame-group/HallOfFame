@@ -6,11 +6,19 @@ public class InvokeRhythmCombo : MonoBehaviour
 {
     private void Start()
     {
-        RhythmCombo.instance.Test();
-        RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-        RhythmCombo.instance.Display(1);
-        RhythmCombo.instance.nodeEventCallback = OnNodeHit;
-        RhythmCombo.instance.finishedEventCallback = finished;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+
+            RhythmCombo.instance.Test();
+            RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
+            RhythmCombo.instance.Display(1, SceneTransitionManager.ESelectedCharacter.Beethovan);
+            RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+            RhythmCombo.instance.finishedEventCallback = finished;
+        }
     }
 
     void OnNodeHit(NodePressResult result)
