@@ -15,6 +15,8 @@ public class CharacterSelectionDisplayName : MonoBehaviour
     {
         displayNameImg = GetComponent<Image>();
         MultiplayerSelection.instance.EvtOnPlayerHighlightCharacter += OnPlayerHighlightCharacter;
+
+        OnPlayerHighlightCharacter();
     }
 
     private void OnPlayerHighlightCharacter()
