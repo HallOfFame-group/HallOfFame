@@ -5,6 +5,26 @@ using UnityEngine.UI;
 
 public class MultiplayerSelection : MonoBehaviour
 {
+    public delegate void OnPlayerHighlightCharacter();
+    public event OnPlayerHighlightCharacter EvtOnPlayerHighlightCharacter;
+
+    private static MultiplayerSelection multiplayerSelection;
+    public static MultiplayerSelection instance
+    {
+        get
+        {
+            if (!multiplayerSelection)
+            {
+                multiplayerSelection = FindObjectOfType<MultiplayerSelection>();
+                if (!multiplayerSelection)
+                {
+                    Debug.LogError("MultiplayerSelection script must be attached to an active object in scene");
+                }
+            }
+            return multiplayerSelection;
+        }
+    }
+
     private enum EPlayerControllerState
     {
         RESET,
@@ -39,6 +59,12 @@ public class MultiplayerSelection : MonoBehaviour
 
     private void Start()
     {
+        // Ensure the singleton pattern
+        if (multiplayerSelection && multiplayerSelection != this)
+        {
+            Destroy(this);
+        }
+
         // Derive highlight and select color
         player1HighlightColor = player1Color;
         player1HighlightColor.a = 0.5f;
@@ -174,6 +200,8 @@ public class MultiplayerSelection : MonoBehaviour
             // Highlight next object
             player1Highlighted = GetNextSelected(player1Highlighted, axisDirection);
             characters[player1Highlighted].image.color = player1HighlightColor;
+
+            EvtOnPlayerHighlightCharacter();
         }
     }
 
@@ -195,6 +223,8 @@ public class MultiplayerSelection : MonoBehaviour
             // Highlight next object
             player2Highlighted = GetNextSelected(player2Highlighted, axisDirection);
             characters[player2Highlighted].image.color = player2HighlightColor;
+
+            EvtOnPlayerHighlightCharacter();
         }
     }
 
@@ -208,18 +238,18 @@ public class MultiplayerSelection : MonoBehaviour
     {
         if (player1ButtonPressed)
         {
-            isPlayer1Selected = !isPlayer1Selected;
             if (characters[player1Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
             {
+                isPlayer1Selected = !isPlayer1Selected;
                 characters[player1Highlighted].image.color = (isPlayer1Selected) ? player1SelectColor : player1HighlightColor;
             }
         }
 
         if (player2ButtonPressed)
         {
-            isPlayer2Selected = !isPlayer2Selected;
             if (characters[player2Highlighted].GetComponent<CharacterSelectable>().IsSelectable)
             {
+                isPlayer2Selected = !isPlayer2Selected;
                 characters[player2Highlighted].image.color = (isPlayer2Selected) ? player2SelectColor : player2HighlightColor;
             }
         }
@@ -237,5 +267,29 @@ public class MultiplayerSelection : MonoBehaviour
         isPlayer2Cancelling = isPlayer2Selected && isPlayer2Cancelling;
 
         SelectCharacter(isPlayer1Cancelling, isPlayer2Cancelling);
+    }
+
+    public Sprite GetCurrentHighlightedDisplayName(int playerIndex)
+    {
+        Sprite nameImg;
+        switch (playerIndex)
+        {
+            case 1:
+                nameImg = characters[player1Highlighted].GetComponent<CharacterSelectable>().characterName;
+                break;
+            case 2:
+                nameImg = characters[player2Highlighted].GetComponent<CharacterSelectable>().characterName;
+                break;
+            default:
+                nameImg = null;
+                break;
+        }
+
+        if (nameImg)
+        {
+            return nameImg;
+        }
+
+        return null;
     }
 }
