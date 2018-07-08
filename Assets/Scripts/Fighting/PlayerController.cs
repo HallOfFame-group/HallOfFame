@@ -17,13 +17,10 @@ public class PlayerController : MonoBehaviour {
     public bool IsGrounded { get; set; }
     public bool IsCrouching { get; set; }
     public bool IsBlocking { get; set; }
-
-<<<<<<< HEAD
-=======
+    
     public enum WeaponType { piano, violin};
     public WeaponType selectedWeapon = WeaponType.piano;
     public GameObject weapon;
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
     //public CameraShake cameraShake;
     //public SlowMotionEffect slowMotionEffect;
 
