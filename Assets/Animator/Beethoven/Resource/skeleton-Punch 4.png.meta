@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: 9920ea31db2a8d14389167581c220574
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: skeleton-Punch 4_0
+    21300002: skeleton-Punch 4_1
+    21300004: skeleton-Punch 4_2
+    21300006: skeleton-Punch 4_3
+    21300008: skeleton-Punch 4_4
+    21300010: skeleton-Punch 4_5
+    21300012: skeleton-Punch 4_6
+    21300014: skeleton-Punch 4_7
+    21300016: skeleton-Punch 4_8
+    21300018: skeleton-Punch 4_9
+    21300020: skeleton-Punch 4_10
+    21300022: skeleton-Punch 4_11
+    21300024: skeleton-Punch 4_12
+    21300026: skeleton-Punch 4_13
+    21300028: skeleton-Punch 4_14
+    21300030: skeleton-Punch 4_15
+    21300032: skeleton-Punch 4_16
+    21300034: skeleton-Punch 4_17
+    21300036: skeleton-Punch 4_18
+    21300038: skeleton-Punch 4_19
+    21300040: skeleton-Punch 4_20
+    21300042: skeleton-Punch 4_21
+    21300044: skeleton-Punch 4_22
+    21300046: skeleton-Punch 4_23
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skeleton-Punch 4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0a148ce1cffc745b661a5ec4c76438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_1
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561ac5e274f155746b16fa26599f88d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_2
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d76725f20de88346b8bcf289d27a7d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_3
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed331f11a12b0041ae684aa4706d3be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_4
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297002785b5496e4db4478d91ea09de5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_5
+      rect:
+        serializedVersion: 2
+        x: 4425
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1e54d297832f947a99e7d5765e101f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_6
+      rect:
+        serializedVersion: 2
+        x: 5310
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6071d288c06cdfe41a9273e0f703db07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_7
+      rect:
+        serializedVersion: 2
+        x: 6195
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323f4a93bdb98bb4da42038195802be7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_8
+      rect:
+        serializedVersion: 2
+        x: 7080
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376fa01d1b5560d49aa5d02da437fa11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_9
+      rect:
+        serializedVersion: 2
+        x: 7965
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89004bcae21fb84d8d8d9aa53f01249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_10
+      rect:
+        serializedVersion: 2
+        x: 8850
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86ee578bb1ed0a4ebb60cb5eaed1aba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_11
+      rect:
+        serializedVersion: 2
+        x: 9735
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480ca4536d89d324f9133904c58d94c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_12
+      rect:
+        serializedVersion: 2
+        x: 10620
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df35cf2800e09ec49b8c4b4d3445301f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_13
+      rect:
+        serializedVersion: 2
+        x: 11505
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc6754d01a0ba84ca798d3b59584ae0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_14
+      rect:
+        serializedVersion: 2
+        x: 12390
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f018f35367036f54c9945fd4854b4234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_15
+      rect:
+        serializedVersion: 2
+        x: 13275
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d23b4991e30e3842852285f5b087b12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_16
+      rect:
+        serializedVersion: 2
+        x: 14160
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a16b71234bb444fa835c6881d8c61e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_17
+      rect:
+        serializedVersion: 2
+        x: 15054
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a4807e01d3147498dd0c411f5de915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_18
+      rect:
+        serializedVersion: 2
+        x: 15930
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da36a51a49d31ec42b2da19d19b0fac4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_19
+      rect:
+        serializedVersion: 2
+        x: 16815
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c2b5b06f4f20e4eb52abf0c020e5d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_20
+      rect:
+        serializedVersion: 2
+        x: 17700
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a8b0d5d95b678448126a0d792e3ec3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_21
+      rect:
+        serializedVersion: 2
+        x: 18585
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da662f1054c10d8428f385839494a104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_22
+      rect:
+        serializedVersion: 2
+        x: 19470
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcc4a4ff80626e48b989a04c57bcd10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Punch 4_23
+      rect:
+        serializedVersion: 2
+        x: 20355
+        y: 0
+        width: 885
+        height: 1175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac26d733be52ba4cbc47ee4ec57a8ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a3df149a372f02841b5849d7cd5ada31
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
