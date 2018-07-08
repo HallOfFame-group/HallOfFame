@@ -38,6 +38,9 @@ public class HitContrller : MonoBehaviour {
             Animator opponentAnimator = collision.transform.root.GetComponentInChildren<Animator>();
             AnimatorStateInfo opponentStateInfo = opponentAnimator.GetCurrentAnimatorStateInfo(0);
             //TODO: still has some issue with opponentStateInfo block
+
+            Debug.Log(gameObject.name +" : "+ collision.name);
+
             if (collision.name.Contains("Position") && !opponentStateInfo.IsName("Block"))
             {
                 for (int i = 0; i < Attack_Name.Length; i++)
