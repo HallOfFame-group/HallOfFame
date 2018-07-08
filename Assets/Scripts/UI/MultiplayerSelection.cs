@@ -216,8 +216,7 @@ public class MultiplayerSelection : MonoBehaviour
 
     public Sprite GetCurrentHighlightedDisplayName(int playerIndex)
     {
-        playerIndex--;
-        Sprite nameImg = characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().characterName;
+        Sprite nameImg = characters[playerHighlighted[--playerIndex]].GetComponent<CharacterSelectable>().characterName;
 
         if (nameImg)
         {
@@ -229,14 +228,17 @@ public class MultiplayerSelection : MonoBehaviour
 
     public RuntimeAnimatorController GetCurrentHighlightedAnimation(int playerIndex)
     {
-        playerIndex--;
-        RuntimeAnimatorController anim = characters[playerHighlighted[playerIndex]].GetComponent<CharacterSelectable>().characterDisplayAnim;
+        RuntimeAnimatorController anim = characters[playerHighlighted[--playerIndex]].GetComponent<CharacterSelectable>().characterDisplayAnim;
         return anim;
     }
 
     public int GetCurrentSelectedIndex(int playerIndex)
     {
-        playerIndex--;
-        return playerHighlighted[playerIndex];
+        return playerHighlighted[--playerIndex];
+    }
+
+    public bool GetCurrentSelectedFlippingHack(int playerIndex)
+    {
+        return characters[playerHighlighted[--playerIndex]].GetComponent<CharacterSelectable>().RequireFlipping;
     }
 }

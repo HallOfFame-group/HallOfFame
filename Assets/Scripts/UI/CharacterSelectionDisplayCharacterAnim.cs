@@ -12,8 +12,11 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
 
     private Animator anim;
 
+    float originalYRotation;
+
     private void Start()
     {
+        originalYRotation = transform.rotation.y;
         anim = GetComponent<Animator>();
         MultiplayerSelection.instance.EvtOnPlayerHighlightCharacter += OnPlayerHighlightCharacter;
 
@@ -22,6 +25,7 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
 
     private void OnPlayerHighlightCharacter()
     {
+        StopCoroutine(DisplayDelay());
         StartCoroutine(DisplayDelay());
     }
 
@@ -29,5 +33,19 @@ public class CharacterSelectionDisplayCharacterAnim : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
         anim.runtimeAnimatorController = MultiplayerSelection.instance.GetCurrentHighlightedAnimation(playerIndex);
+        if (MultiplayerSelection.instance.GetCurrentSelectedFlippingHack(playerIndex))
+        {
+            if (transform.rotation.y == originalYRotation)
+            {
+                transform.Rotate(Vector3.up, 180);
+            }
+        }
+        else
+        {
+            if (transform.rotation.y != originalYRotation)
+            {
+                transform.Rotate(Vector3.up, 180);
+            }
+        }
     }
 }
