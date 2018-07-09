@@ -21,7 +21,6 @@ public class SceneTransitionManager : MonoBehaviour
     private bool proceedNextScene;
 
     public ESelectedCharacter[] selectedCharacter;
-
     AsyncOperation loadSceneAsyncOp;
 
     private static SceneTransitionManager sceneTransitionManager;

@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class MultiplayerSelection : MonoBehaviour
 {
+    private enum EPlayerControllerState
+    {
+        RESET,
+        MOVING,
+        SET,
+        WAIT
+    };
+
     public delegate void OnPlayerHighlightCharacter();
     public event OnPlayerHighlightCharacter EvtOnPlayerHighlightCharacter;
 
@@ -25,14 +33,6 @@ public class MultiplayerSelection : MonoBehaviour
         }
     }
 
-    private enum EPlayerControllerState
-    {
-        RESET = 0,
-        MOVING,
-        SET,
-        WAIT
-    };
-
     private Button[] characters;
 
     [SerializeField]
@@ -48,9 +48,6 @@ public class MultiplayerSelection : MonoBehaviour
 
     private int[] playerHighlighted;
     private bool[] isPlayerSelected;
-    
-    private bool isPlayer1Selected = false;
-    private bool isPlayer2Selected = false;
 
     private void Start()
     {
@@ -93,8 +90,6 @@ public class MultiplayerSelection : MonoBehaviour
 
     private void Update()
     {
-        #region Force player to debounce the input axis
-
         for(int i = 0; i < playerColor.Length; ++i)
         {
             int playerInput = (int)Input.GetAxis("360Controller" + (i + 1) + "_LS_XAxis");
@@ -146,7 +141,6 @@ public class MultiplayerSelection : MonoBehaviour
             CancelSelection(isPlayerCancelling, i);
             SelectCharacter(isPlayerSelecting, i);
         }
-        #endregion
     }
 
     private void SetPlayerHighlight(int axisDirection, int playerIndex)

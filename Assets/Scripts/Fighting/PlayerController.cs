@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
     public bool IsGrounded { get; set; }
     public bool IsCrouching { get; set; }
     public bool IsBlocking { get; set; }
-
+    
     public enum WeaponType { piano, violin};
     public WeaponType selectedWeapon = WeaponType.piano;
     public GameObject weapon;
