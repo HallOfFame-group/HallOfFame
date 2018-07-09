@@ -11,21 +11,32 @@ public class NodeUI : MonoBehaviour
 
     private bool isTravelling;
 
+    private float progress = 0;
+
+    private float distance = 0;
+
     private void Update()
     {
         if (isTravelling)
         {
-            GetComponent<RectTransform>().anchoredPosition += new Vector2(travelSpeed, 0);
+            transform.position += new Vector3(travelSpeed * Time.deltaTime, 0, 0);
+            progress += travelSpeed * Time.deltaTime;
         }
     }
 
     public void Prepare(float distance)
     {
         travelSpeed = distance / completeInSeconds;
+        this.distance = distance;
     }
 
     public void Go()
     {
         isTravelling = true;
+    }
+
+    public float GetProgress()
+    {
+        return progress / distance;
     }
 }
