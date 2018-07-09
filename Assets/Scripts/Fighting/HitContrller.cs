@@ -83,10 +83,10 @@ public class HitContrller : MonoBehaviour {
 
                                 if (opponentHitController.hits > 7)
                                 {
-                                    RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-                                    RhythmCombo.instance.Display(1);
-                                    RhythmCombo.instance.nodeEventCallback = OnNodeHit;
-                                    RhythmCombo.instance.finishedEventCallback = finished;
+                                    //RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
+                                    //RhythmCombo.instance.Display(1);
+                                    //RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+                                    //RhythmCombo.instance.finishedEventCallback = finished;
                                 }
 
                                 break;
@@ -98,7 +98,10 @@ public class HitContrller : MonoBehaviour {
 
                     }
 
-                    //otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
+                    if(gameObject.name=="Mozart")
+                        otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(-transform.right * 10, ForceMode2D.Impulse);
+                    else
+                        otherCollider.transform.root.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
 
                 }
             }

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114806287960055334}
-  - {fileID: 114137632845347130}
-  - {fileID: 114199382232635974}
-  - {fileID: 114013699624233314}
-  - {fileID: 114534446805911660}
+  - {fileID: 114228546524854882}
+  - {fileID: 114154193685934264}
+  - {fileID: 114870193822133658}
+  - {fileID: 114744129205003500}
+  - {fileID: 114922570463583786}
+  - {fileID: 114738324162826380}
   EditorEvents:
   - {fileID: 114812395572824054}
   - {fileID: 114245680099011106}
@@ -31,9 +33,19 @@ MonoBehaviour:
   - {fileID: 114685950991451880}
   - {fileID: 114656462387989282}
   - {fileID: 114335665933380248}
-  MasterBankRef: {fileID: 114137632845347130}
+  - {fileID: 114296855919049938}
+  - {fileID: 114329422263504108}
+  - {fileID: 114489364246229384}
+  - {fileID: 114602354205059622}
+  - {fileID: 114285499237256164}
+  - {fileID: 114067987747299082}
+  - {fileID: 114021372719700712}
+  - {fileID: 114334180532679372}
+  - {fileID: 114948099031289440}
+  - {fileID: 114885103134796278}
+  MasterBankRef: {fileID: 114228546524854882}
   StringsBankRef: {fileID: 114806287960055334}
-  stringsBankWriteTime: 636665595440175657
+  stringsBankWriteTime: 636666665091904011
   cacheVersion: 2
 --- !u!114 &114013699624233314
 MonoBehaviour:
@@ -89,6 +101,28 @@ MonoBehaviour:
   - Name: 
     Value: 17984
   Exists: 1
+--- !u!114 &114021372719700712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Character Select/Schubert Symphony 8
+  guid: 1c31b16d985a804d8fd877c669ff76a2
+  Banks:
+  - {fileID: 114738324162826380}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 868853
 --- !u!114 &114030027337458666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +159,28 @@ MonoBehaviour:
   - Name: 
     Value: 17984
   Exists: 1
+--- !u!114 &114067987747299082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM/Rachmaninoff Concerto 3
+  guid: e01c0b58dcd9114b82b616fbe0882106
+  Banks:
+  - {fileID: 114922570463583786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 945946
 --- !u!114 &114125731335544296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +281,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 11263
+--- !u!114 &114154193685934264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\Beethoven.bank
+  lastModified: 636666665089038996
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 378112
+  Exists: 1
 --- !u!114 &114168867994161896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +331,7 @@ MonoBehaviour:
   Path: event:/SFX/Character/Light Punch Whoosh
   guid: 2992adb6830e4b4fba946658f6a662b5
   Banks:
-  - {fileID: 114013699624233314}
+  - {fileID: 114870193822133658}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -283,6 +357,25 @@ MonoBehaviour:
   - Name: 
     Value: 377824
   Exists: 1
+--- !u!114 &114228546524854882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636666665091894037
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 18912
+  Exists: 1
 --- !u!114 &114245680099011106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +390,7 @@ MonoBehaviour:
   Path: event:/Music/Beethoven/Beethoven Symphony 5 Lead
   guid: 439395e523ced54aab3be787c52a9779
   Banks:
-  - {fileID: 114199382232635974}
+  - {fileID: 114154193685934264}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -367,6 +460,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8605
+--- !u!114 &114285499237256164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM/Schubert String Quartet 14
+  guid: c774149f70716e4e82f8eab105c416b0
+  Banks:
+  - {fileID: 114922570463583786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2316878
 --- !u!114 &114296153201862734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,14 +496,36 @@ MonoBehaviour:
   Path: event:/Music/Beethoven/Beethoven Piano Concerto 3 Main
   guid: f8083533120b1f45bffb4f112910ac26
   Banks:
-  - {fileID: 114199382232635974}
+  - {fileID: 114154193685934264}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 11263
+  Length: 10400
+--- !u!114 &114296855919049938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/NoBGM
+  guid: 79960dae63aa9148b7cb5a283f9d2b86
+  Banks:
+  - {fileID: 114228546524854882}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114299157189472464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +544,50 @@ MonoBehaviour:
   - Name: 
     Value: 640000
   Exists: 0
+--- !u!114 &114329422263504108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM/Saint-Saen Danse Macabre
+  guid: 1a13eb3f7e8db14c918cbb76a22243a7
+  Banks:
+  - {fileID: 114922570463583786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 391746
+--- !u!114 &114334180532679372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Character Select/Rachmaninoff Concerto 3
+  guid: 347c7bf4bdbadc4e95106d6ca3760589
+  Banks:
+  - {fileID: 114738324162826380}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1102184
 --- !u!114 &114335665933380248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +602,7 @@ MonoBehaviour:
   Path: event:/SFX/Character/Punched
   guid: a6787c659d575940a187a9e4ec0a2295
   Banks:
-  - {fileID: 114013699624233314}
+  - {fileID: 114870193822133658}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -552,7 +733,7 @@ MonoBehaviour:
   Path: event:/Music/Beethoven/Beethoven Symphony 5 Main
   guid: 85a28e357f167e43ac67947ddcb3a1aa
   Banks:
-  - {fileID: 114199382232635974}
+  - {fileID: 114154193685934264}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -600,6 +781,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 17932
+--- !u!114 &114489364246229384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM/Saint-Saen Samson and Delilah
+  guid: 361806dcc9742a4f8ce4af33976f9575
+  Banks:
+  - {fileID: 114922570463583786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 433800
 --- !u!114 &114496463786956590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +894,7 @@ MonoBehaviour:
   Path: event:/Music/Mozart/Mozart - Piano Concerto 20 Main
   guid: 518f4b131a02b24bb5377efc324327ab
   Banks:
-  - {fileID: 114534446805911660}
+  - {fileID: 114744129205003500}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -739,6 +942,28 @@ MonoBehaviour:
   - Name: 
     Value: 23648
   Exists: 1
+--- !u!114 &114602354205059622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM/Liszt Totentanz
+  guid: 528680cc345cc04ebc436b4116ef92eb
+  Banks:
+  - {fileID: 114922570463583786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500429
 --- !u!114 &114611151581530418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,7 +997,7 @@ MonoBehaviour:
   Path: event:/Music/Beethoven/Beethoven Piano Concerto 3 Lead
   guid: 9527e706cf30894a9ce51e3cb141b014
   Banks:
-  - {fileID: 114199382232635974}
+  - {fileID: 114154193685934264}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -812,7 +1037,7 @@ MonoBehaviour:
   Path: event:/Music/Mozart/Mozart Symphony 40 Main
   guid: 3be2116218e9194293391452f0cb5a62
   Banks:
-  - {fileID: 114534446805911660}
+  - {fileID: 114744129205003500}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -834,7 +1059,7 @@ MonoBehaviour:
   Path: event:/Music/Mozart/Mozart Symphony 40 Lead
   guid: 299f1b897e6cd849876183087d3a214c
   Banks:
-  - {fileID: 114534446805911660}
+  - {fileID: 114744129205003500}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -856,7 +1081,7 @@ MonoBehaviour:
   Path: event:/SFX/Character/Kick Whoosh
   guid: 29a3e5f411196344a919b60ecd1165b8
   Banks:
-  - {fileID: 114013699624233314}
+  - {fileID: 114870193822133658}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -878,7 +1103,7 @@ MonoBehaviour:
   Path: event:/Music/Mozart/Mozart - Piano Concerto 20 Lead
   guid: 58d43c4fce63354fb06c5db875c4af60
   Banks:
-  - {fileID: 114534446805911660}
+  - {fileID: 114744129205003500}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -900,7 +1125,7 @@ MonoBehaviour:
   Path: event:/SFX/Character/Heavy Punch Whoosh
   guid: 8a5cb9002c252d489b9af01c54b2a2ea
   Banks:
-  - {fileID: 114013699624233314}
+  - {fileID: 114870193822133658}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -966,6 +1191,43 @@ MonoBehaviour:
   - Name: 
     Value: 377824
   Exists: 1
+--- !u!114 &114738324162826380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\Character
+    Select.bank
+  lastModified: 636666665091804269
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 41458976
+  Exists: 1
+--- !u!114 &114744129205003500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\Mozart.bank
+  lastModified: 636666665091953870
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 640288
+  Exists: 1
 --- !u!114 &114802946168238298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,11 +1258,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\HallOfFame\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636665595440175657
+  lastModified: 636666665091904011
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1532
+    Value: 2328
   Exists: 1
 --- !u!114 &114812395572824054
 MonoBehaviour:
@@ -1016,8 +1278,8 @@ MonoBehaviour:
   Path: event:/SFX/Character/Footstep
   guid: a7941ad8a7fcbb43a75d19fdbdabab07
   Banks:
-  - {fileID: 114137632845347130}
-  - {fileID: 114013699624233314}
+  - {fileID: 114228546524854882}
+  - {fileID: 114870193822133658}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1061,6 +1323,46 @@ MonoBehaviour:
   - Name: 
     Value: 640000
   Exists: 1
+--- !u!114 &114870193822133658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\SFX.bank
+  lastModified: 636666665091963854
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 23648
+  Exists: 1
+--- !u!114 &114885103134796278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Character Select/Liszt Rhapsodie Espagnole
+  guid: 70f1e8799d7aec439c5cff4848f8c676
+  Banks:
+  - {fileID: 114738324162826380}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 775968
 --- !u!114 &114903208470041526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,3 +1399,43 @@ MonoBehaviour:
   - Name: 
     Value: 640000
   Exists: 1
+--- !u!114 &114922570463583786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Nathan-Proj\01_UnityProj\HallOfFame\Assets\HallOfFame\Build\Desktop\BGM.bank
+  lastModified: 636666665088939271
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 65354944
+  Exists: 1
+--- !u!114 &114948099031289440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Character Select/Tchaikovsky Concerto 1
+  guid: 644e22052ba65f46a596d8f023dd73e1
+  Banks:
+  - {fileID: 114738324162826380}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 577933

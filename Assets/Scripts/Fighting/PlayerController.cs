@@ -82,11 +82,18 @@ public class PlayerController : MonoBehaviour {
         {
             if (transform.position.x > target.position.x)
             {
-                transform.rotation = Quaternion.Euler(0,180,0);
+                if(gameObject.name=="Mozart")
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+
             }
             else
             {
-                transform.rotation = Quaternion.identity;
+                if (gameObject.name == "Mozart")
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                else
+                    transform.rotation = Quaternion.identity;
             }
         }
 
