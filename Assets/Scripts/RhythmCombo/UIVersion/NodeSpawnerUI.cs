@@ -24,13 +24,18 @@ public class NodeSpawnerUI : MonoBehaviour
     [SerializeField]
     private Node[] spawnNodeSetting;
 
+    private Queue<GameObject> spawnedNode;
+
     private TimedNode[] preparedNodeTimeline;
     private int spawnCount = 0;
     private BeatlineUI beatlineUI;
+    private float distance;
 
     private void Start()
     {
-        beatlineUI = FindObjectOfType<BeatlineUI>();    
+        beatlineUI = FindObjectOfType<BeatlineUI>();
+        distance = Vector3.Distance(transform.position, beatlineUI.transform.position);
+        spawnedNode = new Queue<GameObject>();
     }
 
     private void Update()
@@ -65,5 +70,20 @@ public class NodeSpawnerUI : MonoBehaviour
     {
         GameObject go = Instantiate(spawnNode, this.transform);
         go.GetComponent<Image>().sprite = sprite;
+        go.GetComponent<NodeUI>().Prepare(distance);
+        go.GetComponent<NodeUI>().Go();
+        spawnedNode.Enqueue(go);
+    }
+
+    public GameObject GetNode()
+    {
+        if (spawnedNode.Count != 0)
+        {
+            return spawnedNode.Dequeue();
+        }
+        else
+        {
+            return null;
+        }
     }
 }
