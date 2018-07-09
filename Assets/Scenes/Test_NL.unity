@@ -492,6 +492,16 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 95331298184518182, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b8410dd77ac4ac4ba8f58076c682e37, type: 2}
+    - target: {fileID: 212637990478640020, guid: 939db3a8f967e6d4295900a7310af44c,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 939db3a8f967e6d4295900a7310af44c, type: 2}
   m_IsPrefabParent: 0
@@ -820,7 +830,8 @@ Prefab:
         type: 2}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1999809925530812, guid: bc34620647122f542b6cb08d33674e15,
+        type: 2}
     - target: {fileID: 114298317704936258, guid: 939db3a8f967e6d4295900a7310af44c,
         type: 2}
       propertyPath: target
