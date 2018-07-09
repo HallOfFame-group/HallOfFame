@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313614240637912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.43, y: -20.86, z: 1}
+  m_LocalPosition: {x: -0.9300003, y: -5.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4431828797326202}
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15638065, y: 5.8254266}
+  m_Offset: {x: -0.26, y: 5.8254266}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -247,7 +247,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15638065, y: 5.8254266}
+  m_Offset: {x: -0.26, y: 5.8254266}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -355,6 +355,8 @@ MonoBehaviour:
   moveSpeed: 20
   jumpHight: 75
   PlayerNumber: 1
+  selectedWeapon: 0
+  weapon: {fileID: 0}
 --- !u!114 &114301723155037094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,6 +371,26 @@ MonoBehaviour:
   attackList:
   - AttackName: Punch1
     attackType: 0
+  - AttackName: Punch2
+    attackType: 0
+  - AttackName: Punch3
+    attackType: 1
+  - AttackName: Punch4
+    attackType: 2
+  - AttackName: Duck Punch
+    attackType: 0
+  - AttackName: Duck Kick
+    attackType: 0
+  - AttackName: Head Smash
+    attackType: 1
+  - AttackName: Kick1
+    attackType: 1
+  - AttackName: Kick2
+    attackType: 1
+  - AttackName: Jump Punch
+    attackType: 1
+  - AttackName: Jump Kick
+    attackType: 1
   attackTriggered: 0
   hits: 0
   text: {fileID: 0}
