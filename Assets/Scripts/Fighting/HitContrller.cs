@@ -81,12 +81,12 @@ public class HitContrller : MonoBehaviour {
                                         break;
                                 }
 
-                                if (opponentHitController.hits > 7)
+                                if (opponentHitController.hits > 2)
                                 {
-                                    //RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-                                    //RhythmCombo.instance.Display(1);
-                                    //RhythmCombo.instance.nodeEventCallback = OnNodeHit;
-                                    //RhythmCombo.instance.finishedEventCallback = finished;
+                                    RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
+                                    RhythmCombo.instance.Display(1);
+                                    RhythmCombo.instance.nodeEventCallback = OnNodeHit;
+                                    RhythmCombo.instance.finishedEventCallback = finished;
                                 }
 
                                 break;

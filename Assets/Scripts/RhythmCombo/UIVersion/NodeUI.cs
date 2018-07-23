@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum NodeButton
+{
+    A,
+    B,
+    Y
+}
+
 public class NodeUI : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +22,8 @@ public class NodeUI : MonoBehaviour
 
     private float distance = 0;
 
+    public NodeButton keyCode;
+
     private void Update()
     {
         if (isTravelling)
@@ -24,10 +33,11 @@ public class NodeUI : MonoBehaviour
         }
     }
 
-    public void Prepare(float distance)
+    public void Prepare(float distance, NodeButton key)
     {
         travelSpeed = distance / completeInSeconds;
         this.distance = distance;
+        keyCode = key;
     }
 
     public void Go()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
 public struct RhythmResult
 {
     public int perfectCount;
@@ -10,7 +11,7 @@ public struct RhythmResult
     public int badCount;
     public int missCount;
 };
-
+*/
 [System.Serializable]
 public struct RhythmComboBannerEntry
 {

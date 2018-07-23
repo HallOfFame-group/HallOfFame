@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct RhythmResult
+{
+    public int perfectCount;
+    public int goodCount;
+    public int badCount;
+    public int missCount;
+};
+
 public class RhythmComboUI : MonoBehaviour
 {
     // Rhythm combo callback event
@@ -42,7 +50,9 @@ public class RhythmComboUI : MonoBehaviour
     private ComboPiece preparedComboPiece;
 
     private NodeSpawnerUI nodeSpawner;
-    //private BeatLineUI beatline;
+    private BeatlineUI beatline;
+
+    private bool ifNodeSpawnedFinished = false;
 
     private void Start()
     {
@@ -52,10 +62,29 @@ public class RhythmComboUI : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        if (nodeSpawner && beatline)
+        {
+            nodeSpawner.EvtOnNodeSpawnedFinished += OnNodeSpawnedFinishedHandler;
+            beatline.EvtOnBeatlineProcessedANode += OnBeatlineProcessedANodeHandler;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (nodeSpawner && beatline)
+        {
+            nodeSpawner.EvtOnNodeSpawnedFinished -= OnNodeSpawnedFinishedHandler;
+            beatline.EvtOnBeatlineProcessedANode -= OnBeatlineProcessedANodeHandler;
+        }
+    }
+
     private void Init()
     {
         // Initalize
         nodeSpawner = transform.GetComponentInChildren<NodeSpawnerUI>();
+        beatline = transform.GetComponentInChildren<BeatlineUI>();
     }
 
     public void Prepare(ComboPiece comboPiece)
@@ -67,9 +96,20 @@ public class RhythmComboUI : MonoBehaviour
     public void Activate()
     {
         nodeSpawner.Spawn();
+        ifNodeSpawnedFinished = false;
     }
 
     public void Stop()
+    {
+
+    }
+
+    private void OnNodeSpawnedFinishedHandler()
+    {
+        ifNodeSpawnedFinished = true;
+    }
+
+    private void OnBeatlineProcessedANodeHandler(NodePressResult nodeBtn)
     {
 
     }

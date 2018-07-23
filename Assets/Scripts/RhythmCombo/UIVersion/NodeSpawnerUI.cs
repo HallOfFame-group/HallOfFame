@@ -46,12 +46,32 @@ public class NodeSpawnerUI : MonoBehaviour
 
             if (preparedNodeTimeline[spawnCount].timeStamp - 1 <= elapsedTime)
             {
+                NodeButton btn = preparedNodeTimeline[spawnCount].nodeButton;
                 // Spawn a UI image at current position
-                // Change the UI image sprite depends on the buttonId
+                switch (btn)
+                {
+                    case NodeButton.A:
+                        SpawnNode(spawnNodeSetting[(int)btn].buttonSprite, btn);
+                        break;
+                    case NodeButton.B:
+                        SpawnNode(spawnNodeSetting[(int)btn].buttonSprite, btn);
+                        break;
+                    case NodeButton.Y:
+                    default:
+                        SpawnNode(spawnNodeSetting[(int)btn].buttonSprite, btn);
+                        break;
+                }
+
                 // Increment spawn count
+                ++spawnCount;
             }
 
             // Check if spawn has finished, and calls the event
+            if (spawnCount == preparedNodeTimeline.Length)
+            {
+                EvtOnNodeSpawnedFinished();
+                isSpawning = false;
+            }
         }
     }
 
@@ -63,16 +83,18 @@ public class NodeSpawnerUI : MonoBehaviour
     public void Spawn()
     {
         isSpawning = true;
-        SpawnNode(spawnNodeSetting[0].buttonSprite);
+        SpawnNode(spawnNodeSetting[0].buttonSprite, NodeButton.A);
     }
 
-    private void SpawnNode(Sprite sprite)
+    private GameObject SpawnNode(Sprite sprite, NodeButton btnKey)
     {
         GameObject go = Instantiate(spawnNode, this.transform);
         go.GetComponent<Image>().sprite = sprite;
-        go.GetComponent<NodeUI>().Prepare(distance);
+        go.GetComponent<NodeUI>().Prepare(distance, btnKey);
         go.GetComponent<NodeUI>().Go();
         spawnedNode.Enqueue(go);
+
+        return go;
     }
 
     public GameObject GetNode()
