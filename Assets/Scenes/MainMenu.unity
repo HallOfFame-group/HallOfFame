@@ -549,13 +549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21cf77ffc8b119c42bcaab8d27755796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  sceneIndex: 1
-=======
   nextScene:
     m_SceneAsset: {fileID: 102900000, guid: 62b53c17e2def1a43b6df2db22870b66, type: 3}
     m_SceneName: CharacterSelection
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1007916198
 GameObject:
   m_ObjectHideFlags: 0
