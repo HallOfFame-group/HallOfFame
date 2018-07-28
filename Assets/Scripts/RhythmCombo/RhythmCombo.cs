@@ -51,6 +51,8 @@ public class RhythmCombo : MonoBehaviour
     [SerializeField]
     private RhythmComboBannerMapping[] bannerMapping;
     private GameObject playedBannerImage;
+
+    private static bool HasRegistered = false;
     #endregion
 
     #region Public Members
@@ -141,6 +143,8 @@ public class RhythmCombo : MonoBehaviour
         {
             instance.comboResult = beatline.rhythmResult;
             finishedEventCallback();
+
+            HasRegistered = false;
         }
     }
 
@@ -157,10 +161,16 @@ public class RhythmCombo : MonoBehaviour
     /// <param name="combo"></param>
     public void Register(ComboPiece combo)
     {
-        currentPlayingPiece = combo;
-        //title.text = combo.musicName + " - " + combo.artistName;
-        nodeSpawner.PrepareNodes(combo.timeNodeArray);
-        spawnFinishedFlag = false;
+        if (!HasRegistered)
+        {
+            currentPlayingPiece = combo;
+            //title.text = combo.musicName + " - " + combo.artistName;
+            nodeSpawner.PrepareNodes(combo.timeNodeArray);
+            spawnFinishedFlag = false;
+
+            HasRegistered = true;
+
+        }
     }
 
     /// <summary>

@@ -638,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &529149544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1657,7 +1657,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1044155660631408, guid: 1225414405f6b92459af4682b7e82459, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114818499400921070, guid: 1225414405f6b92459af4682b7e82459,
         type: 2}
@@ -1708,7 +1708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1044155660631408, guid: e180547cf811f754aa2e309125e16f7e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e180547cf811f754aa2e309125e16f7e, type: 2}
@@ -1884,7 +1884,7 @@ Prefab:
       objectReference: {fileID: 1904031962}
     - target: {fileID: 1162836232192732, guid: 809562098ec768746837aeb99988f804, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 809562098ec768746837aeb99988f804, type: 2}
@@ -2066,6 +2066,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa36766906913734c9c1f83ff2ff878c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PerfectProgressThreshold: 0.9
+  GoodProgressThreshold: 0.7
+  BadProgressThreshold: 0.4
+  processedCount: 0
 --- !u!1 &1876686231
 GameObject:
   m_ObjectHideFlags: 0
