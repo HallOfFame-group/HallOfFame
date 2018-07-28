@@ -83,8 +83,9 @@ public class HitContrller : MonoBehaviour {
 
                                 if (opponentHitController.hits > 2)
                                 {
+                                    Debug.Log(this.GetComponent<ComboPiece>());
                                     RhythmCombo.instance.Register(this.GetComponent<ComboPiece>());
-                                    RhythmCombo.instance.Display(1);
+                                    RhythmCombo.instance.Display(this.playerController.PlayerNumber);
                                     RhythmCombo.instance.nodeEventCallback = OnNodeHit;
                                     RhythmCombo.instance.finishedEventCallback = finished;
                                 }
