@@ -126,11 +126,7 @@ GameObject:
   - component: {fileID: 275053093}
   - component: {fileID: 275053094}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Panel
-=======
   m_Name: CharacterSelections
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,26 +142,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-<<<<<<< HEAD
-  - {fileID: 678760227}
-  - {fileID: 584108134}
-=======
   - {fileID: 584108134}
   - {fileID: 678760227}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   - {fileID: 1976508945}
   - {fileID: 955679110}
   - {fileID: 1837950066}
   - {fileID: 707771633}
-<<<<<<< HEAD
-  m_Father: {fileID: 1339435245}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 1920, y: 360}
-=======
   - {fileID: 1996383561}
   m_Father: {fileID: 1339435245}
   m_RootOrder: 0
@@ -174,7 +156,6 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 300}
   m_SizeDelta: {x: 0, y: 150}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275053091
 MonoBehaviour:
@@ -188,11 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -246,11 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ceee2c51f27e0042b174d9c60930d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  unselectedColor: {r: 1, g: 1, b: 1, a: 1}
-  player1Color: {r: 1, g: 0, b: 0, a: 0}
-  player2Color: {r: 0.24137926, g: 0, b: 1, a: 1}
-=======
   unselectedColor: {r: 1, g: 1, b: 1, a: 0}
   playerColor:
   - {r: 1, g: 0, b: 0, a: 0}
@@ -391,7 +363,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 375019974}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &554269288
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,11 +425,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &575995655
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,10 +435,7 @@ GameObject:
   - component: {fileID: 575995656}
   - component: {fileID: 575995658}
   - component: {fileID: 575995657}
-<<<<<<< HEAD
-=======
   - component: {fileID: 575995659}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Layer: 0
   m_Name: Player2SelectedName
   m_TagString: Untagged
@@ -510,22 +473,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-  m_Sprite: {fileID: 21300000, guid: f38278a06aa6a024696ea7a91110acd2, type: 3}
-=======
   m_Sprite: {fileID: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -539,9 +494,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575995655}
-<<<<<<< HEAD
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
 --- !u!114 &575995659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,7 +507,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeShowingName: 0.3
   playerIndex: 2
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &584108133
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,11 +520,7 @@ GameObject:
   - component: {fileID: 584108135}
   - component: {fileID: 584108138}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Button (1)
-=======
   m_Name: Tchaikovsky
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,29 +535,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000042, y: 1.0000042, z: 1.0000042}
-<<<<<<< HEAD
-  m_Children: []
-  m_Father: {fileID: 275053090}
-  m_RootOrder: 1
-=======
   m_Children:
   - {fileID: 1738996174}
   m_Father: {fileID: 275053090}
   m_RootOrder: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
-  m_SizeDelta: {x: 275, y: 200}
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_SizeDelta: {x: 250, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584108135
 MonoBehaviour:
@@ -665,29 +598,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-=======
-  m_Sprite: {fileID: 21300000, guid: e496326b9571f3248898c32f0fa4ec1a, type: 3}
-  m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
   m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -712,13 +631,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 0
-<<<<<<< HEAD
-=======
   characterName: {fileID: 21300000, guid: 01311cb3451e8404589a5c8bac9d454c, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: b4e629ec1a8016349a86ad059fd083c5,
     type: 2}
   RequireFlipping: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &678760226
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,25 +663,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD
-  m_Children: []
-  m_Father: {fileID: 275053090}
-  m_RootOrder: 0
-=======
   m_Children:
   - {fileID: 725055802}
   m_Father: {fileID: 275053090}
   m_RootOrder: 1
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
   m_SizeDelta: {x: 275, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678760228
 MonoBehaviour:
@@ -784,11 +690,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-<<<<<<< HEAD
-  m_Transition: 2
-=======
   m_Transition: 1
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
@@ -824,29 +726,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-=======
-  m_Sprite: {fileID: 21300000, guid: 9b383b4968e923a43a5d3baeecd4ccd8, type: 3}
-  m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
   m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -871,13 +759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  characterName: {fileID: 21300000, guid: f6ba6a32fa181fc41bd3c9a8e9c481e1, type: 3}
-  characterImage: {fileID: 0}
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   characterName: {fileID: 21300000, guid: f6ba6a32fa181fc41bd3c9a8e9c481e1, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: 93b8783fce2705248a0987294feeba35,
     type: 2}
@@ -950,7 +831,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 698948328}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &707771632
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,23 +859,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000042, y: 1.0000042, z: 1.0000042}
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 333981054}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 275053090}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
   m_SizeDelta: {x: 275, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707771634
 MonoBehaviour:
@@ -1050,29 +922,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-=======
-  m_Sprite: {fileID: 21300000, guid: 72e2746188d17a744adac5126f9e5a07, type: 3}
-  m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
   m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1097,12 +955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  characterName: {fileID: 21300000, guid: f38278a06aa6a024696ea7a91110acd2, type: 3}
-  characterImage: {fileID: 0}
-=======
   characterName: {fileID: 21300000, guid: f38278a06aa6a024696ea7a91110acd2, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: 5ea157e9dca466e4b996a26f59490406,
     type: 2}
@@ -1175,7 +1027,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725055801}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &784318224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,11 +1039,7 @@ GameObject:
   - component: {fileID: 784318226}
   - component: {fileID: 784318225}
   m_Layer: 5
-<<<<<<< HEAD
-  m_Name: Canvas
-=======
   m_Name: Background
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1274,9 +1121,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
 --- !u!1 &797760808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayTime: 1.5
   playerIndex: 1
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &955679109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,11 +1239,7 @@ GameObject:
   - component: {fileID: 955679111}
   - component: {fileID: 955679114}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Button (3)
-=======
   m_Name: Dvorak
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,27 +1254,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000042, y: 1.0000042, z: 1.0000042}
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 1031176893}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 275053090}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
   m_SizeDelta: {x: 275, y: 200}
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
-  m_SizeDelta: {x: 275, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955679111
 MonoBehaviour:
@@ -1483,12 +1310,6 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 955679109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-=======
   m_GameObject: {fileID: 955679109}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1577,7 +1398,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1588,54 +1408,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-=======
   m_Sprite: {fileID: 21300000, guid: 8e27543039c51ed42b95024db945e8db, type: 3}
   m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
-  m_Sprite: {fileID: 21300000, guid: 8e27543039c51ed42b95024db945e8db, type: 3}
-  m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-<<<<<<< HEAD
---- !u!222 &955679113
-=======
 --- !u!222 &1031176895
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 955679109}
---- !u!114 &955679114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 955679109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3668df60b8f44c47a4c713ca379a65a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSelectable: 0
-<<<<<<< HEAD
-=======
-  characterName: {fileID: 0}
-  characterImage: {fileID: 0}
-=======
   m_GameObject: {fileID: 1031176892}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1231299173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,10 +1492,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231299173}
-<<<<<<< HEAD
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1339435241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,11 +1504,7 @@ GameObject:
   - component: {fileID: 1339435243}
   - component: {fileID: 1339435242}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Canvas
-=======
   m_Name: HUD
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1800,14 +1578,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 275053090}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   - {fileID: 1231299174}
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
-  - {fileID: 1231299174}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1816,11 +1587,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1496814500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,10 +1597,7 @@ GameObject:
   - component: {fileID: 1496814501}
   - component: {fileID: 1496814503}
   - component: {fileID: 1496814502}
-<<<<<<< HEAD
-=======
   - component: {fileID: 1496814504}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Layer: 0
   m_Name: Player1SelectedName
   m_TagString: Untagged
@@ -1872,22 +1635,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-  m_Sprite: {fileID: 21300000, guid: f6ba6a32fa181fc41bd3c9a8e9c481e1, type: 3}
-=======
   m_Sprite: {fileID: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1901,9 +1656,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496814500}
-<<<<<<< HEAD
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
 --- !u!114 &1496814504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,7 +1842,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738996173}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1837950065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,11 +1855,7 @@ GameObject:
   - component: {fileID: 1837950067}
   - component: {fileID: 1837950070}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Button (4)
-=======
   m_Name: Chopin
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,23 +1870,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000042, y: 1.0000042, z: 1.0000042}
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 698948329}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 275053090}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
   m_SizeDelta: {x: 275, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837950067
 MonoBehaviour:
@@ -2194,29 +1933,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-=======
-  m_Sprite: {fileID: 21300000, guid: 8c28908461f247d40adbd20794b83c2c, type: 3}
-  m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
   m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2241,13 +1966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 0
-<<<<<<< HEAD
-=======
   characterName: {fileID: 21300000, guid: 6d5de26f8c33e164b84e560c70cef2c7, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: b4e629ec1a8016349a86ad059fd083c5,
     type: 2}
   RequireFlipping: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1890363726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,11 +2064,7 @@ GameObject:
   - component: {fileID: 1976508946}
   - component: {fileID: 1976508949}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Button (2)
-=======
   m_Name: Berlioz
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,23 +2079,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000042, y: 1.0000042, z: 1.0000042}
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 2040948926}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 275053090}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 250, y: 250}
-=======
   m_SizeDelta: {x: 275, y: 200}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976508946
 MonoBehaviour:
@@ -2432,29 +2142,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-=======
-  m_Sprite: {fileID: 21300000, guid: 54941e51a3de6764ead58f446bc2a7f1, type: 3}
-  m_Type: 0
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
   m_Type: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2479,17 +2175,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  characterName: {fileID: 0}
-  characterImage: {fileID: 0}
-=======
   characterName: {fileID: 21300000, guid: ad37edbe15e011a4b90db4efba96beda, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: b4e629ec1a8016349a86ad059fd083c5,
     type: 2}
   RequireFlipping: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &1996383560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,11 +2192,7 @@ GameObject:
   - component: {fileID: 1996383563}
   - component: {fileID: 1996383562}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Button (5)
-=======
   m_Name: Vivaldi
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2522,12 +2207,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000008, y: 1.0000008, z: 1.0000008}
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 375019975}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Father: {fileID: 275053090}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2548,15 +2229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectable: 0
-<<<<<<< HEAD
-  characterName: {fileID: 0}
-  characterImage: {fileID: 0}
-=======
   characterName: {fileID: 21300000, guid: e42aab1c3aa17e642a0044a08dfc6d82, type: 3}
   characterDisplayAnim: {fileID: 9100000, guid: b4e629ec1a8016349a86ad059fd083c5,
     type: 2}
   RequireFlipping: 0
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!114 &1996383563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,22 +2286,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-<<<<<<< HEAD
-  m_Sprite: {fileID: 21300000, guid: 487e5a149b21b734a9c610116b17396f, type: 3}
-=======
   m_Sprite: {fileID: 21300000, guid: 0c639b4570673d84abae7900f83ee325, type: 3}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2639,9 +2307,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1996383560}
-<<<<<<< HEAD
->>>>>>> parent of 95f00bf... Merge branch 'master' of https://github.com/HallOfFame-group/HallOfFame
-=======
 --- !u!1 &2040948925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,7 +2375,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2040948925}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
 --- !u!1 &2071125001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,8 +2483,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &2123948487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,4 +2551,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123948487}
->>>>>>> 132ba892fc5e2590101ff943f4aa5fee5cb380c3
