@@ -50,9 +50,9 @@ public class RhythmCombo : MonoBehaviour
 
     [SerializeField]
     private RhythmComboBannerMapping[] bannerMapping;
-    private GameObject playedBannerImage;
+    private ShowBanner playedBannerImage;
 
-    private static bool HasRegistered = false;
+    private static bool hasActivated = false;
     #endregion
 
     #region Public Members
@@ -99,6 +99,8 @@ public class RhythmCombo : MonoBehaviour
         beatline.callbackFunc = NodeProcessed;
         nodeSpawner.callbackFunc = SpawnFinished;
 
+        playedBannerImage = FindObjectOfType<ShowBanner>();
+
         // Obtain visual feed back elements for node pressed event
         // musicUI = FindObjectOfType<MusicTitleUIControl>();
 
@@ -121,7 +123,7 @@ public class RhythmCombo : MonoBehaviour
     private void Activate(bool active)
     {
         panel.SetActive(active);
-        // musicUI.gameObject.SetActive(active);
+        GetComponent<Animator>().enabled = active;
     }
 
     // Handling NodeSpawner callback, marks the node spawner has finished spawning process, awaiting for beatline
@@ -144,7 +146,7 @@ public class RhythmCombo : MonoBehaviour
             instance.comboResult = beatline.rhythmResult;
             finishedEventCallback();
 
-            HasRegistered = false;
+            hasActivated = false;
         }
     }
 
@@ -161,15 +163,15 @@ public class RhythmCombo : MonoBehaviour
     /// <param name="combo"></param>
     public void Register(ComboPiece combo)
     {
-        if (!HasRegistered)
+        Debug.Log(combo);
+        if (!hasActivated)
         {
             currentPlayingPiece = combo;
             //title.text = combo.musicName + " - " + combo.artistName;
             nodeSpawner.PrepareNodes(combo.timeNodeArray);
             spawnFinishedFlag = false;
 
-            HasRegistered = true;
-
+            hasActivated = true;
         }
     }
 
@@ -193,28 +195,41 @@ public class RhythmCombo : MonoBehaviour
 
     public void Display(int playerNum, SceneTransitionManager.ESelectedCharacter c)
     {
-        --playerNum;
-        foreach (RhythmComboBannerEntry entry in bannerMapping[playerNum].entries)
+        if (playerNum == 1)
         {
-            if (entry.CharacterName == c)
+            if (c == SceneTransitionManager.ESelectedCharacter.Beethovan)
             {
-                // Play corresponding animation mapped to this entry
-                playedBannerImage = entry.CharacterBanner.gameObject;
-                playedBannerImage.SetActive(true);
-                break;
+                playedBannerImage.Show(ShowBanner.EBannerToShown.ShowLeftBeethoven);
+            }
+            else
+            {
+                playedBannerImage.Show(ShowBanner.EBannerToShown.ShowLeftMozart);
             }
         }
-        Activate(true);
-        this.playerNum = playerNum;
+        else
+        {
+            if (c == SceneTransitionManager.ESelectedCharacter.Beethovan)
+            {
+                playedBannerImage.Show(ShowBanner.EBannerToShown.ShowRightBeethoven);
+            }
+            else
+            {
+                playedBannerImage.Show(ShowBanner.EBannerToShown.ShowRightMozart);
+            }
+        }
+        //Activate(true);
+        this.playerNum = --playerNum;
     }
 
     public void BannerAnimFinishedHandler()
     {
-        playedBannerImage.SetActive(false);
+        Activate(true);
     }
 
     public void RolloutAnimFinshedHandler()
     {
+        Debug.Log(nodeSpawner);
+        Debug.Log(currentPlayingPiece);
         beatline.RegisterPlayerNum(playerNum);
         nodeSpawner.StartSpawning(currentPlayingPiece.musicPathReference);
     }
